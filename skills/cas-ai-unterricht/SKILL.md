@@ -16,6 +16,7 @@ Dramaturgie, Übungen und eine befüllte PowerPoint in der offiziellen HWZ-Vorla
 4. **Schnittthemen prüfen:** Nichts unterrichten, was ein anderer Tag vertieft (Liste in `references/kurskontext.md`).
 5. **PPTX nur über die Vorlage:** Immer `scripts/build_pptx.py` mit der HWZ-Vorlage aus `assets/`, nie Folien frei gestalten. Echte Umlaute überall.
 6. **Erst Konzept, dann Folien:** Dramaturgie und Übungen mit dem/der Dozierenden festziehen, bevor die PPTX gebaut wird.
+7. **1 Aussage = 1 Folie, Layouts variieren:** Modelle und Frameworks (z.B. CORE+) als grafische Übersicht plus pro Element eine Erklär- und eine Beispielfolie auflösen (Muster in `references/dramaturgie-uebungen.md`). Für fehlende Grafiken Bild-Platzhalter setzen.
 
 ## Ablauf
 
@@ -60,10 +61,13 @@ Artefakt/Kriterien, FERC-Reflexion am Schluss. **Dem/der Dozierenden zur Abnahme
 
 ### Schritt 4: Folienplan bauen
 
-Nach der Abnahme: Folienplan gemäss Folien-Dramaturgie (Standardaufbau in
-`references/dramaturgie-uebungen.md`) als JSON gemäss `references/hwz-vorlage.md`
-(Layout-Katalog, Plan-Format). Speaker Notes pro Folie: Regieanweisungen, Zeitmarken,
-Demo-Schritte. Übungsfolien mit Auftrag, Zeit, Artefakt, Kriterien auf einer Folie.
+Nach der Abnahme: Folienplan gemäss Folien-Dramaturgie (Standardaufbau, Framework-Muster
+und Platzhalter-Regeln in `references/dramaturgie-uebungen.md`) als JSON gemäss
+`references/hwz-vorlage.md` (Layout-Katalog, Layout-Zuordnung pro Folientyp, Plan-Format).
+Grundprinzip 1 Aussage = 1 Folie, Layouts aktiv variieren, für geplante Grafiken und
+Screenshots Bild-Platzhalter mit `BILD-PLATZHALTER:`-Note setzen. Speaker Notes pro Folie:
+Regieanweisungen, Zeitmarken, Demo-Schritte. Übungsfolien mit Auftrag, Zeit, Artefakt,
+Kriterien auf einer Folie.
 
 ### Schritt 5: PPTX erzeugen und verifizieren
 
@@ -79,8 +83,9 @@ Curriculum 10 Arbeitstage vorher (vorbefüllt im Repo unter `downloads/curriculu
 ### Schritt 6: Übergabepaket
 
 Zusammen mit der PPTX liefern: Tagesraster (Markdown), Übungsaufträge im Wortlaut,
-FERC-Reflexionsauftrag mit Abgabefrist (+5 Arbeitstage), offene Punkte aus den
-Absprachen des/der Dozierenden (Spalte «Absprachen/Aufgaben» im Dozierenden-Profil).
+FERC-Reflexionsauftrag mit Abgabefrist (+5 Arbeitstage), Liste aller Bild-Platzhalter
+(Folie + benötigte Grafik/Screenshot), offene Punkte aus den Absprachen des/der
+Dozierenden (Spalte «Absprachen/Aufgaben» im Dozierenden-Profil).
 
 ## Vertiefungen (nur bei Bedarf laden)
 

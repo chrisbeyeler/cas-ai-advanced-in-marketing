@@ -27,13 +27,17 @@ Regeln:
 
 ## Folien-Dramaturgie (Struktur des Decks)
 
-Standardaufbau eines Tagesdecks (25–40 Folien):
+**Grundprinzip: 1 Aussage = 1 Folie.** Jede Folie trägt genau eine Kernbotschaft im Titel.
+Lieber mehr Folien mit wenig Inhalt als wenige volle. Sammelfolien («5 Punkte zu X») nur
+für Agenda, Lernziele und Zusammenfassungen.
+
+Standardaufbau eines Tagesdecks (30–50 Folien, mit Framework-Blöcken auch mehr):
 
 1. **Titelfolie:** Tag, Thema, Dozent/in, Datum (Layout «Titelfolie dunkel»).
 2. **Tagesbogen:** Wo stehen wir im CAS, was war vorher, was baut darauf auf («Inhalt normal»).
 3. **Leitidee als These:** Die Leitidee des Tages (aus den Tagesdaten) als eine grosse Aussage.
 4. **Lernziele + Agenda:** Lernziele wörtlich aus dem Curriculum übernehmen (Konsistenz!).
-5. **Pro Input-Block:** These → Konzept → Beispiel/Demo-Verweis → Merkregel. Nie mehr als 5 Bullets pro Folie, Bullets sind Aussagen, keine Stichwort-Wolken.
+5. **Pro Input-Block:** These → Konzept → Beispiel/Demo-Verweis → Merkregel, je als eigene Folie. Nie mehr als 5 Bullets pro Folie, Bullets sind Aussagen, keine Stichwort-Wolken.
 6. **Übungsfolien:** Auftrag, Zeitbudget, erwartetes Artefakt, Bewertungskriterien: alles auf EINER Folie, die während der Übung stehen bleibt.
 7. **Transfer-Folie:** Der Transfer-ins-Marketing-Text des Tages, als Brücke formuliert.
 8. **Leadership-Folie:** Was heisst das für Führung? (Delegation, Qualitätssicherung, Team-Rollout, Ownership/Authorship.) Mindestens eine pro Tag.
@@ -42,6 +46,38 @@ Standardaufbau eines Tagesdecks (25–40 Folien):
 
 Speaker Notes nutzen: Regieanweisungen, Zeitmarken, Demo-Schritte, erwartete Rückfragen
 gehören in die Notizen, nie auf die Folie.
+
+## Framework-Muster: Modelle in Folien auflösen
+
+Modelle und Frameworks (CORE+, FERC, SDSP, Funnel-Modelle, eigene Raster) NIE auf eine
+einzelne Textfolie quetschen. Standardmuster:
+
+1. **Übersichtsfolie mit Grafik:** Das ganze Modell als Bild («Inhalt Bild rechts» oder
+   «Bild vollflächig»), mit Grafik-Platzhalter falls die Grafik noch fehlt.
+2. **Pro Element eine Erklärfolie:** Element im Titel (z.B. «C wie Character»), 2–4 Bullets
+   was es leistet und worauf zu achten ist («Inhalt normal» oder «Folie mit Bild rechts»).
+3. **Pro Element eine Beispielfolie:** Konkretes Marketing-Beispiel, Prompt-Ausschnitt oder
+   Screenshot dazu («Inhalt Bild rechts», «Vergleich» für Vorher/Nachher, «Bild vollflächig»
+   für Screenshots).
+4. **Abschlussfolie des Blocks:** Modell nochmals komplett (gleiche Grafik wie 1.), jetzt
+   als Merkbild vor der Übung.
+
+Beispiel CORE+: 1 Übersicht + je Erklärung und Beispiel für C, O, R, E, + Talk = 11 Folien,
+plus Merkbild. Diese Folienzahl ist gewollt; der Takt hält das Publikum im Vortrag.
+
+Bei jedem Muster die Layouts abwechseln (Katalog und Zuordnung in `hwz-vorlage.md`):
+nie mehr als 3 Folien «Inhalt normal» hintereinander.
+
+## Grafik- und Bild-Platzhalter
+
+- Wo eine Grafik oder ein Screenshot hingehört, immer ein Layout MIT Bild-Platzhalter wählen
+  und den Platzhalter leer lassen; Dozierende ergänzen das Bild selbst.
+- In die Speaker Notes eine Zeile `BILD-PLATZHALTER: <was hier hingehört>` schreiben
+  (z.B. «BILD-PLATZHALTER: CORE+-Übersichtsgrafik, 5 Bausteine als Kreis»).
+- Hat das Layout eine Bildlegende (idx 16/17), dort eine kurze Beschriftung setzen, damit
+  der Platzhalter auf der Folie erkennbar bleibt.
+- Pro Deck-Entwurf am Schluss eine Liste aller Bild-Platzhalter ins Übergabepaket aufnehmen,
+  damit Dozierende wissen, welche Grafiken sie noch beschaffen müssen.
 
 ## Übungsformate (passend zur Zielgruppe)
 

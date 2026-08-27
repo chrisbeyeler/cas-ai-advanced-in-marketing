@@ -29,9 +29,25 @@ Vorlage: `assets/HWZ_Praesentationsvorlage_extern_DE.potx` (identisch mit `downl
 | `Schlussfolie` | Letzte Folie | keine Platzhalter (fixes Design) |
 
 Faustregeln:
-- Titelfolie dunkel → Tagesbogen/Agenda auf `Inhalt normal` → Kapiteltrenner mit `Titel dunkel  - Bild rechts` oder `Titel Bild vollflächig` → Inhalt gemischt aus `Inhalt normal`, `Inhalt 3 Spalten`, `Vergleich` → `Schlussfolie`.
+- Titelfolie dunkel → Tagesbogen/Agenda auf `Inhalt normal` → Kapiteltrenner mit `Titel dunkel  - Bild rechts` oder `Titel Bild vollflächig` → Inhalt gemischt → `Schlussfolie`.
 - Übungsfolien auf `Inhalt normal` (Auftrag, Zeit, Artefakt, Kriterien als Bullets).
-- Bild-Platzhalter dürfen leer bleiben (Dozierende ergänzen eigene Bilder/Screenshots).
+- Bild-Platzhalter dürfen leer bleiben (Dozierende ergänzen eigene Bilder/Screenshots). Zu jedem leeren Bild-Platzhalter gehört eine Note-Zeile `BILD-PLATZHALTER: <Beschreibung>` (siehe `dramaturgie-uebungen.md`).
+- **Layout-Varianz ist Pflicht:** nie mehr als 3 Folien `Inhalt normal` hintereinander; pro Deck mindestens 5 verschiedene Layouts einsetzen.
+
+## Layout-Zuordnung pro Folientyp (1 Aussage = 1 Folie)
+
+| Folientyp | Layout |
+|---|---|
+| Leitidee / grosse These | `Titel Bild vollflächig` oder `3 Spalten Titel - blau` (Mittelspalte leer) |
+| Modell-/Framework-Übersicht (Grafik) | `Inhalt Bild rechts` oder `Bild vollflächig` (Grafik-Platzhalter) |
+| Element-Erklärung (z.B. «C wie Character») | `Inhalt normal` oder `Folie mit Bild rechts` |
+| Element-Beispiel | `Inhalt Bild rechts` (Screenshot + Legende) oder `Vergleich` (Vorher/Nachher) |
+| Drei Konzepte / drei Optionen | `Inhalt 3 Spalten` |
+| Gegenüberstellung / Pro-Contra | `Vergleich` |
+| Live-Demo-Anker / Screenshot | `Bild vollflächig` |
+| Zwei Beispiele nebeneinander | `Inhalt 2 Bilder` |
+| Merkregel / Kernaussage auf Blau | `3 Spalten Titel - blau` |
+| Transfer- und Leadership-Folie | `Folie mit schmalerem Bild rechts` (Bild-Platzhalter) |
 
 ## PPTX bauen: `scripts/build_pptx.py`
 
