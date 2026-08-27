@@ -52,8 +52,9 @@ gehören in die Notizen, nie auf die Folie.
 Modelle und Frameworks (CORE+, FERC, SDSP, Funnel-Modelle, eigene Raster) NIE auf eine
 einzelne Textfolie quetschen. Standardmuster:
 
-1. **Übersichtsfolie mit Grafik:** Das ganze Modell als Bild («Inhalt Bild rechts» oder
-   «Bild vollflächig»), mit Grafik-Platzhalter falls die Grafik noch fehlt.
+1. **Übersichtsfolie mit Diagramm:** Das ganze Modell als gerendertes Diagramm
+   (`diagram` typ zyklus/prozess/pyramide auf «Inhalt normal», Spezifikation in
+   `hwz-vorlage.md`). Nur wenn kein Diagramm-Typ passt: Grafik-Platzhalter setzen.
 2. **Pro Element eine Erklärfolie:** Element im Titel (z.B. «C wie Character»), 2–4 Bullets
    was es leistet und worauf zu achten ist («Inhalt normal» oder «Folie mit Bild rechts»).
 3. **Pro Element eine Beispielfolie:** Konkretes Marketing-Beispiel, Prompt-Ausschnitt oder
@@ -66,7 +67,22 @@ Beispiel CORE+: 1 Übersicht + je Erklärung und Beispiel für C, O, R, E, + Tal
 plus Merkbild. Diese Folienzahl ist gewollt; der Takt hält das Publikum im Vortrag.
 
 Bei jedem Muster die Layouts abwechseln (Katalog und Zuordnung in `hwz-vorlage.md`):
-nie mehr als 3 Folien «Inhalt normal» hintereinander.
+nie mehr als 3 reine Textfolien «Inhalt normal» hintereinander (Folien mit `cards`
+oder `diagram` zählen als eigene Optik, nicht als Textfolie).
+
+## Cards & Diagramme einsetzen (Anspruch: aussergewöhnlich gute Folien)
+
+- **Struktur sichtbar machen statt aufzählen:** Sobald Bullets eine verdeckte Struktur
+  haben (Schritte, Kreislauf, Ebenen, 2 Dimensionen, Zeitachse), das passende Diagramm
+  wählen: prozess, zyklus, pyramide, matrix, timeline (Spezifikation in `hwz-vorlage.md`).
+- **Karten für Nebeneinander:** 2–4 gleichrangige Konzepte, Hebel, Regeln oder Rollen als
+  `cards`; Kennzahlen und Vorher/Nachher-Werte als KPI-Karten (`kpi`).
+- **Akzentfarben nach Bedeutung:** gruen = positiv/empfohlen, rot = Risiko/Warnung,
+  gelb = Hinweis. Standard bleibt Blau. Nie dekorativ einfärben.
+- **Pro Deck mindestens 2 Diagramm-Folien und 1 Card-Folie**, sonst wirkt das Deck wie
+  eine Textwüste. Umgekehrt: nie zwei Diagramme derselben Art direkt hintereinander.
+- **Tagesbogen/Agenda als timeline**, Framework-Übersichten als zyklus/prozess/pyramide,
+  Entscheidungshilfen als matrix.
 
 ## Grafik- und Bild-Platzhalter
 

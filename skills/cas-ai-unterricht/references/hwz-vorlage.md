@@ -39,7 +39,10 @@ Faustregeln:
 | Folientyp | Layout |
 |---|---|
 | Leitidee / grosse These | `Titel Bild vollflächig` oder `3 Spalten Titel - blau` (Mittelspalte leer) |
-| Modell-/Framework-Übersicht (Grafik) | `Inhalt Bild rechts` oder `Bild vollflächig` (Grafik-Platzhalter) |
+| Modell-/Framework-Übersicht | `Inhalt normal` + `diagram` (zyklus/prozess/pyramide) — Grafik-Platzhalter nur für Spezial-Grafiken |
+| Konzept-Karten, KPI-Zahlen | `Inhalt normal` + `cards` |
+| Entscheidungsraster | `Inhalt normal` + `diagram` matrix |
+| Tagesablauf / Agenda visuell | `Inhalt normal` + `diagram` timeline |
 | Element-Erklärung (z.B. «C wie Character») | `Inhalt normal` oder `Folie mit Bild rechts` |
 | Element-Beispiel | `Inhalt Bild rechts` (Screenshot + Legende) oder `Vergleich` (Vorher/Nachher) |
 | Drei Konzepte / drei Optionen | `Inhalt 3 Spalten` |
@@ -88,6 +91,50 @@ Felder pro Folie:
 - `texts`: gezielt per Platzhalter-idx (Schlüssel als String), Wert = Liste von Absätzen (String oder `{"t","lvl"}`).
 - `images`: `{"10": "pfad/bild.png"}`, füllt Bild-Platzhalter.
 - `notes`: Speaker Notes (Regieanweisungen, Zeitmarken, Demo-Schritte).
+- `cards` / `diagram`: nativ gerenderte Karten und Diagramme, siehe nächster Abschnitt.
+
+## Cards & Diagramme (nativ gerendert, HWZ-konform)
+
+Das Script zeichnet Karten und Diagramme direkt in die Inhaltsfläche (Basis-Layout
+`Inhalt normal`, Titel gesetzt, KEINE `bullets` auf derselben Folie). Farben, Aptos und
+Kontrast (helle Fläche → Dunkelblau, dunkle Fläche → Weiss) sind fest verdrahtet.
+Diese Elemente ERSETZEN externe Grafiken für Standard-Visualisierungen; Bild-Platzhalter
+braucht es nur noch für Screenshots, Fotos und Spezial-Grafiken.
+
+**Karten** (`cards`, max. 8, ab 5 zweireihig; `akzent`: gruen | gelb | rot, Standard Hellblau):
+
+```json
+{"layout": "Inhalt normal", "title": "Drei Hebel",
+ "cards": [
+   {"kopf": "Qualität", "text": "Raster statt Bauchgefühl.", "akzent": "gruen"},
+   {"kopf": "Tempo", "text": "Chains statt Einzel-Prompts."},
+   {"kpi": "8×", "kopf": "schneller", "text": "gemessen an Kampagnen-Copy"}]}
+```
+
+Mit `kpi` wird die Karte zur Zahlen-Karte (grosse Zahl zentriert). Text pro Karte kurz
+halten: Kopf max. 3 Wörter, Text max. 2 Sätze.
+
+**Diagramme** (`diagram`, `typ` Pflicht):
+
+| typ | Einsatz | Felder |
+|---|---|---|
+| `prozess` | Ablauf/Phasen, 2–6 Schritte (Chevrons) | `schritte`: [{"t","sub"?}] |
+| `zyklus` | Kreislauf-Modelle wie CORE+/FERC, 3–6 Schritte | `schritte`, optional `mitte` (Zentrum-Label) |
+| `matrix` | 2x2-Entscheidungsraster | `quadranten` (genau 4: ol, or, ul, ur; {"titel","text"?,"akzent":true}), `x`, `y` (Achsen) |
+| `pyramide` | Ebenen/Hierarchie, 2–5 Stufen | `ebenen`: [{"t","sub"?}] (oben = erste) |
+| `timeline` | Tagesablauf, Meilensteine, 2–7 Punkte | `punkte`: [{"t","sub"?,"akzent"?}] |
+
+```json
+{"layout": "Inhalt normal", "title": "CORE+ im Überblick",
+ "diagram": {"typ": "zyklus", "mitte": "CORE+",
+   "schritte": [{"t": "C", "sub": "Character"}, {"t": "O", "sub": "Objective"},
+                {"t": "R", "sub": "Rules"}, {"t": "E", "sub": "Example"},
+                {"t": "+", "sub": "Talk"}]}}
+```
+
+Regeln: Beschriftungen kurz (t: 1–3 Wörter, sub: max. 5 Wörter), Elementzahl-Limits
+einhalten (das Script kürzt sonst mit Warnung), pro Folie genau EIN Element (cards ODER
+diagram), nie zusammen mit `bullets`.
 
 Nach dem Bauen IMMER verifizieren: Script meldet Folienzahl und Warnungen
 (unbekanntes Layout, nicht gefundene idx). Warnungen beheben, nicht ignorieren.

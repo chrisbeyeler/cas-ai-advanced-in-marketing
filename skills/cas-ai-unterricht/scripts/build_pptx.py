@@ -13,11 +13,16 @@ import tempfile
 from pathlib import Path
 from zipfile import ZipFile
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
 try:
     from pptx import Presentation
     from pptx.util import Pt
 except ImportError:
     sys.exit("python-pptx fehlt. Installieren mit: pip3 install python-pptx")
+
+from hwz_cards import content_area, remove_empty_body, render_cards
+from hwz_diagramme import render_diagram
 
 DEFAULT_TEMPLATE = Path(__file__).resolve().parent.parent / "assets" / "HWZ_Praesentationsvorlage_extern_DE.potx"
 
@@ -73,9 +78,9 @@ def main():
     warnings = []
 
     for n, spec in enumerate(plan["slides"], 1):
-        layout = layouts.get(spec["layout"])
+        layout = layouts.get(spec.get("layout", ""))
         if layout is None:
-            warnings.append(f"Folie {n}: Layout '{spec['layout']}' unbekannt, nutze 'Inhalt normal'.")
+            warnings.append(f"Folie {n}: Layout '{spec.get('layout')}' unbekannt, nutze 'Inhalt normal'.")
             layout = layouts.get("Inhalt normal") or prs.slide_layouts[5]
         slide = prs.slides.add_slide(layout)
         by_idx = {ph.placeholder_format.idx: ph for ph in slide.placeholders}
@@ -119,13 +124,29 @@ def main():
 
         for idx_str, img in (spec.get("images") or {}).items():
             ph = by_idx.get(int(idx_str))
-            img_path = Path(img)
             if ph is None:
                 warnings.append(f"Folie {n}: Bild-idx {idx_str} nicht gefunden.")
-            elif not img_path.exists():
-                warnings.append(f"Folie {n}: Bilddatei fehlt: {img}")
+            elif not hasattr(ph, "insert_picture"):
+                warnings.append(f"Folie {n}: idx {idx_str} ist kein Bild-Platzhalter.")
+            elif not img or not Path(img).is_file():
+                warnings.append(f"Folie {n}: Bilddatei fehlt: {img!r}")
             else:
-                ph.insert_picture(str(img_path))
+                ph.insert_picture(str(img))
+
+        if spec.get("cards") or spec.get("diagram"):
+            if spec.get("bullets"):
+                warnings.append(f"Folie {n}: bullets und cards/diagram auf derselben Folie "
+                                f"überlagern sich — aufteilen.")
+            area = content_area(slide, skip_idx=(title_idx, subtitle_idx))
+            if spec.get("cards") and spec.get("diagram"):
+                warnings.append(f"Folie {n}: cards UND diagram gesetzt — nur cards gerendert, "
+                                f"diagram auf eigene Folie legen.")
+            if spec.get("cards"):
+                warnings += render_cards(slide, area, spec["cards"], n)
+            elif spec.get("diagram"):
+                warnings += render_diagram(slide, area, spec["diagram"], n)
+            if not spec.get("bullets"):
+                remove_empty_body(slide, skip_idx=(title_idx, subtitle_idx))
 
         if spec.get("notes"):
             slide.notes_slide.notes_text_frame.text = spec["notes"]

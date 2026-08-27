@@ -17,6 +17,7 @@ Dramaturgie, Übungen und eine befüllte PowerPoint in der offiziellen HWZ-Vorla
 5. **PPTX nur über die Vorlage:** Immer `scripts/build_pptx.py` mit der HWZ-Vorlage aus `assets/`, nie Folien frei gestalten. Echte Umlaute überall.
 6. **Erst Konzept, dann Folien:** Dramaturgie und Übungen mit dem/der Dozierenden festziehen, bevor die PPTX gebaut wird.
 7. **1 Aussage = 1 Folie, Layouts variieren:** Modelle und Frameworks (z.B. CORE+) als grafische Übersicht plus pro Element eine Erklär- und eine Beispielfolie auflösen (Muster in `references/dramaturgie-uebungen.md`). Für fehlende Grafiken Bild-Platzhalter setzen.
+8. **Cards und Diagramme nutzen:** Strukturen als gerenderte Diagramme (prozess, zyklus, matrix, pyramide, timeline) und gleichrangige Konzepte/Kennzahlen als Karten (`cards`/`kpi`) statt Bullet-Listen; pro Deck mindestens 2 Diagramm- und 1 Card-Folie (Regeln in beiden References).
 
 ## Ablauf
 

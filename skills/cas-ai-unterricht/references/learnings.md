@@ -2,7 +2,7 @@
 
 > Erstellt: 2026-08-27
 > Letztes Pruning: 2026-08-27
-> Eintragsanzahl: 0
+> Eintragsanzahl: 6
 
 ---
 
@@ -18,7 +18,12 @@ anwenden soll. Format:
 Eintrag nur, wenn die Regel mindestens 2x bestätigt wurde.
 -->
 
-_(noch keine Regeln, werden durch wrap-up-Sessions ergänzt)_
+1. Textmenge pro Karte begrenzen statt Autofit: KPI-Karten nur Zahl + Label (max. 6 Wörter), Inhalts-Karten max. 30 Wörter. Autofit (`TEXT_TO_FIT_SHAPE`) erzeugt inkonsistente Schriftgrössen zwischen Karten. (Design-Recherche 2026-08-28)
+2. Karten: entweder helle Flächenfüllung ODER dünner Rahmen, nie beides. Akzentbalken nur oben, 3-5pt. Eckenradius klein (adjustment 0.04-0.08), sonst wirkt es verspielt. (Design-Recherche 2026-08-28)
+3. Diagramm-Element-Limits sind Lesbarkeits-Grenzen, nicht Geschmack: Prozess max. 6, Zyklus 4-6, Pyramide 3-5, Timeline max. 7. Das Script kürzt mit Warnung, besser vorher planen. (Design-Recherche 2026-08-28)
+4. Schrift-Minimum in Diagrammen 11pt, Karten-Fliesstext 12-13pt; Bullets auf Folien deutlich grösser (Vorlagen-Standard). Kontrast auf farbigen Flächen immer über `text_color_for()` (programmatisch), nie per Augenmass. (Design-Recherche 2026-08-28)
+5. Ein Deck ohne Diagramme wirkt wie eine Textwüste: pro Deck mindestens 2 Diagramm- und 1 Card-Folie, aber nie zwei gleiche Diagramm-Typen direkt hintereinander. (Chris-Auftrag 2026-08-28)
+6. Verifikation der PPTX auf dem Air: PowerPoint per AppleScript als PDF exportieren, `pdftoppm -png` rastern, Folien als Bilder prüfen. Ein fehlerfreier Build-Lauf ist KEIN Beleg für gute Folien. (Session 2026-08-28)
 
 ---
 
