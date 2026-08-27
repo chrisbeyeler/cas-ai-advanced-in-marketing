@@ -9,3 +9,6 @@ Datenquellen: Stundenplan V1.2 (27.08.2026), Modulaufbau-Matrix, Dozierendenprof
 Ordner `pre-reading/`: Vorbereitungspaket für Teilnehmende, neu mit `05-challenge-pitch.md` (Zulassungsbedingung, Abgabe am Ende von Tag 1, 02.09.).
 
 Ordner `downloads/`: HWZ Curriculum-Vorlage (leer), HWZ Präsentationsvorlage (.potx) und unter `downloads/curriculum/` 16 vorbefüllte Curricula, je eines pro Kurstag. Die Seite verlinkt sie relativ; die Ordnerstruktur muss im Repo erhalten bleiben.
+
+
+Ordner `skills/`: Claude-Skill `cas-ai-unterricht` für Dozierende. Führt geführt vom Briefing (Dozent/in, Kurstag, eigene Inhalte) über Dramaturgie und Übungen bis zur fertig befüllten PowerPoint in der HWZ-Vorlage (`scripts/build_pptx.py`). Nutzung in Claude Code: Ordner als Skill installieren oder den Inhalt von `skills/cas-ai-unterricht/` in ein Claude-Projekt laden.
