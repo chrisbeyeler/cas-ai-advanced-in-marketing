@@ -4,7 +4,7 @@ Was musst du über KI lernen, und was bedeutet das konkret? Diese Übersicht ord
 
 ## Wie der CAS aufgebaut ist
 
-16 Studientage in fünf Blöcken: **Prompt Mastery** (3 Tage), **Strategy & Leadership** (3), **Creative AI Tools** (4), **Autonomous AI** (3) und **Praxis** (3). Der rote Faden ist deine eigene Marketing-Challenge: formuliert an Tag 1, gepitcht an Tag 2, prototypisiert am Hackathon (Tag 6), danach liefert jeder Kurstag einen Baustein an genau diesem Projekt, bis zur Präsentation vor Jury an Tag 16. Leitmodell ist «Vom Use Case zum Werkzeug»: Der CAS führt dich von Stufe 2 (einzelne Use Cases) zu Stufe 3 (eigene Werkzeuge, die dauerhaft laufen).
+16 Studientage in fünf Blöcken: **Prompt Mastery** (3 Tage), **Strategy & Leadership** (3), **Creative AI Tools** (4), **Autonomous AI** (3) und **Praxis** (3). Der rote Faden ist deine eigene Marketing-Challenge: formuliert an Tag 1, gepitcht an Tag 2, prototypisiert am Hackathon (Tag 6), danach liefert jeder Kurstag einen Baustein an genau diesem Projekt, bis zur Präsentation vor Jury an Tag 16. Leitmodell ist «Vom Use Case zum Werkzeug»: Der CAS führt dich von Stufe 2 (einzelne Use Cases) zu Stufe 3 (eigene Werkzeuge, die dauerhaft laufen). Dieses und alle weiteren Modelle, auf die der Kurs verweist (CORE+, FERC, Human-in-the-Loop, DSG/EU AI Act), sind in den [Rahmenmodellen](06-rahmenmodelle.md) kurz erklärt.
 
 Jede Tagesseite im Kurs weist aus, welche Kompetenzfelder und Bloom-Stufen der Tag bedient. Die Nummern hier entsprechen dieser Zuordnung.
 

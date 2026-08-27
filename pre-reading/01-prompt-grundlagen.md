@@ -39,7 +39,7 @@ Merke: Langer Kontext gehört an den **Anfang** des Prompts, die eigentliche Auf
 
 ## FERC: der Arbeitsrhythmus des CAS
 
-Neben CORE+ (wie du briefst) nutzt der CAS FERC (wie du arbeitest und reflektierst): **Frame, Explore, Refine, Commit.** Ziel setzen, Alternativen erzeugen, vergleichen, verantwortet entscheiden. Jeder Kurstag folgt diesem Rhythmus an deiner eigenen Challenge, und nach Tag 3 schreibst du dazu eine benotete FERC-Reflexion. Du musst FERC vor Kursstart nicht üben, nur den Gedanken kennen: Nie die erste Antwort nehmen, immer Varianten erzeugen und begründet wählen.
+Neben CORE+ (wie du briefst) nutzt der CAS FERC (wie du arbeitest und reflektierst, siehe [Rahmenmodelle](06-rahmenmodelle.md)): **Frame, Explore, Refine, Commit.** Ziel setzen, Alternativen erzeugen, vergleichen, verantwortet entscheiden. Jeder Kurstag folgt diesem Rhythmus an deiner eigenen Challenge, und nach Tag 3 schreibst du dazu eine benotete FERC-Reflexion. Du musst FERC vor Kursstart nicht üben, nur den Gedanken kennen: Nie die erste Antwort nehmen, immer Varianten erzeugen und begründet wählen.
 
 ## Dos und Don'ts
 

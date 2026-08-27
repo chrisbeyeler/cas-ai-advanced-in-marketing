@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pre-Reading · CAS Advanced AI in Marketing HWZ</title>
+<meta name="description" content="Vorbereitungspaket für Teilnehmende des CAS Advanced AI in Marketing an der HWZ: Lernziele, Rahmenmodelle, Prompt-Grundlagen, Checkliste und Challenge-Pitch.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --hwz:#0032A0; --hwz-deep:#001E66; --ink:#14213D; --ink-2:#4A5570; --line:#D9DEE9;
+  --paper:#FFFFFF; --field:#F2F4F8; --field-2:#E8ECF4;
+  --ok:#0B7A5E; --warn:#B8860B;
+  --font:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --disp:"Fraunces","IBM Plex Sans",Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font-family:var(--font);color:var(--ink);background:var(--paper);font-size:15.5px;line-height:1.6}
+a{color:var(--hwz)}
+:focus-visible{outline:3px solid var(--hwz);outline-offset:2px}
+
+header.hero{background:var(--hwz);color:#fff;padding:46px 24px 40px}
+.hero-in{max-width:880px;margin:0 auto}
+.logo{display:inline-block;background:#fff;color:var(--hwz);font-weight:700;font-size:26px;letter-spacing:.02em;padding:4px 10px;line-height:1;margin-bottom:20px}
+header.hero .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.85;margin:0 0 10px}
+header.hero h1{font-family:var(--disp);font-weight:700;font-size:clamp(30px,5.5vw,46px);line-height:1.08;margin:0 0 14px;letter-spacing:-.01em;text-wrap:balance}
+header.hero p.lede{font-size:17px;max-width:64ch;margin:0;opacity:.94}
+header.hero .facts{display:flex;gap:22px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;margin-top:24px;opacity:.9}
+
+nav.toc{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:10}
+nav.toc .in{max-width:880px;margin:0 auto;display:flex;gap:4px;overflow-x:auto;padding:0 16px}
+nav.toc a{color:var(--ink-2);text-decoration:none;font-size:13.5px;font-weight:500;padding:13px 12px;white-space:nowrap;border-bottom:3px solid transparent}
+nav.toc a:hover{color:var(--hwz)}
+nav.toc a.on{color:var(--hwz);border-bottom-color:var(--hwz)}
+
+main{max-width:880px;margin:0 auto;padding:12px 24px 90px}
+section{padding-top:44px}
+h2{font-family:var(--disp);font-weight:600;font-size:27px;margin:0 0 6px;letter-spacing:-.01em}
+h2 .n{font-family:var(--mono);font-size:14px;color:var(--hwz);vertical-align:6px;margin-right:8px}
+h3{font-size:14px;font-weight:600;margin:28px 0 10px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2)}
+p{max-width:72ch}
+p.lead{color:var(--ink-2);margin:0 0 20px}
+ul{max-width:72ch}
+li{margin:4px 0}
+.mono{font-family:var(--mono);font-size:12.5px}
+.tag{display:inline-block;font-family:var(--mono);font-size:11px;padding:2px 8px;border-radius:3px;background:var(--field-2);color:var(--ink);white-space:nowrap}
+.tag.blue{background:var(--hwz);color:#fff}
+
+table{border-collapse:collapse;width:100%;font-size:14px}
+.tw{overflow-x:auto;margin:14px 0}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2);font-weight:500;background:var(--field)}
+td.c{white-space:nowrap;font-family:var(--mono);font-size:12.5px}
+
+.card{border:1px solid var(--line);border-radius:8px;padding:18px 20px;background:#fff;margin:0 0 14px}
+.card.field{background:var(--field);border-color:var(--field-2)}
+.card h4{margin:0 0 6px;font-size:16.5px;font-weight:600}
+.card .sub{font-family:var(--mono);font-size:11.5px;color:var(--hwz);margin:0 0 8px}
+.card p{font-size:14.5px;margin:0 0 8px}
+.card p:last-child{margin:0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:720px){.grid2{grid-template-columns:1fr}}
+
+.kf{border-left:4px solid var(--hwz);padding:4px 0 4px 18px;margin:0 0 26px}
+.kf h4{font-family:var(--disp);font-size:19px;font-weight:600;margin:0 0 4px}
+.kf .claim{font-weight:600;margin:0 0 6px;font-size:15px}
+.kf .im-cas{font-size:13.5px;color:var(--ink-2);margin:0 0 10px}
+.kf .im-cas b{color:var(--ink)}
+
+.check{list-style:none;padding:0;margin:10px 0 4px;max-width:none}
+.check li{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:6px;margin:6px 0;font-size:14.5px}
+.check li label{display:flex;gap:10px;align-items:flex-start;cursor:pointer;width:100%}
+.check input{margin-top:3px;accent-color:var(--hwz);width:16px;height:16px;flex-shrink:0}
+.check li.done{background:#F1FAF6;border-color:#9FD6C1}
+.note{border-left:3px solid var(--warn);background:#FFF9E8;padding:10px 14px;border-radius:0 6px 6px 0;font-size:14px;margin:16px 0;max-width:none}
+.note.blue{border-left-color:var(--hwz);background:var(--field)}
+code{font-family:var(--mono);font-size:.88em;background:var(--field);padding:1px 5px;border-radius:4px}
+
+footer{border-top:1px solid var(--line);margin-top:30px}
+footer .in{max-width:880px;margin:0 auto;padding:22px 24px;font-family:var(--mono);font-size:12px;color:var(--ink-2);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-in">
+    <span class="logo">HWZ</span>
+    <p class="kicker">CAS Advanced AI in Marketing · Pre-Reading</p>
+    <h1>Gut vorbereitet in den ersten Kurstag</h1>
+    <p class="lede">Dieses Paket bereitet dich auf den Kursstart vor. Plane 3 bis 4 Stunden ein, verteilt auf die Tage vor dem ersten Kurstag. Am wichtigsten: die Prompt-Grundlagen und dein Challenge-Pitch.</p>
+    <div class="facts">
+      <span>Start Mi 02.09.2026, 08.15 Uhr</span>
+      <span>Sihlhof Zürich, Lagerstrasse 5</span>
+      <span>16 Studientage bis 11.12.2026</span>
+      <span>Abgaben über myHWZ</span>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Inhalt">
+  <div class="in">
+    <a href="#ablauf">Ablauf</a>
+    <a href="#lernziele">Lernziele</a>
+    <a href="#rahmenmodelle">Rahmenmodelle</a>
+    <a href="#grundlagen">Prompt-Grundlagen</a>
+    <a href="#checkliste">Checkliste</a>
+    <a href="#quellen">Quellen</a>
+    <a href="#challenge">Challenge-Pitch</a>
+  </div>
+</nav>
+
+<main>
+
+<section id="ablauf">
+  <h2><span class="n">1</span>So gehst du vor</h2>
+  <p class="lead">Sechs Schritte, in dieser Reihenfolge. Alles Weitere bekommst du am ersten Kurstag.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Schritt</th><th>Inhalt</th><th>Aufwand</th></tr></thead>
+    <tbody>
+      <tr><td class="c">1</td><td><a href="#lernziele">Lernziele und Kompetenzstufen</a>: verstehe, wohin die Reise geht</td><td class="c">15 Min.</td></tr>
+      <tr><td class="c">2</td><td><a href="#rahmenmodelle">Rahmenmodelle</a>: die Modelle und Begriffe, auf die der CAS immer wieder verweist</td><td class="c">15 Min.</td></tr>
+      <tr><td class="c">3</td><td><a href="#grundlagen">Prompt-Grundlagen</a>: Pflichtlektüre, wird am ersten Tag vorausgesetzt</td><td class="c">60 Min.</td></tr>
+      <tr><td class="c">4</td><td><a href="#checkliste">Vorbereitungs-Checkliste</a>: Accounts, Material, Setup</td><td class="c">45 Min.</td></tr>
+      <tr><td class="c">5</td><td><a href="#quellen">Laufende Quellen</a>: abonnieren und dranbleiben</td><td class="c">10 Min.</td></tr>
+      <tr><td class="c">6</td><td><a href="#challenge">Challenge-Pitch</a> vorbereiten: <b>Abgabe am Ende von Tag 1 (02.09.) auf myHWZ</b>, Zulassungsbedingung</td><td class="c">60 Min.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note blue">Am ersten Kurstag arbeiten wir sofort praktisch. Vorausgesetzt werden: die gelesenen Prompt-Grundlagen inklusive Übungen (das CORE+-Schema daraus ist ab Tag 1 das gemeinsame Vokabular), eingerichtete Accounts, dein eigenes Material und der vorbereitete Challenge-Pitch. Bei Fragen vor Kursstart: HWZ-Studiengangsadministration oder direkt die Studiengangsleitung.</div>
+</section>
+
+<section id="lernziele">
+  <h2><span class="n">2</span>Lernziele und Kompetenzstufen</h2>
+  <p class="lead">Was musst du über KI lernen, und was bedeutet das konkret? Die sechs Kompetenzfelder des CAS, geordnet nach der Bloomschen Taxonomie. Die Stufen bauen aufeinander auf: Erinnern → Verstehen → Anwenden → Analysieren → Evaluieren → Erschaffen. Das Ziel des CAS liegt auf den Stufen 4 bis 6.</p>
+
+  <h3>Wie der CAS aufgebaut ist</h3>
+  <p>16 Studientage in fünf Blöcken: <b>Prompt Mastery</b> (3 Tage), <b>Strategy &amp; Leadership</b> (3), <b>Creative AI Tools</b> (4), <b>Autonomous AI</b> (3) und <b>Praxis</b> (3). Der rote Faden ist deine eigene Marketing-Challenge: formuliert an Tag 1, gepitcht an Tag 2, prototypisiert am Hackathon (Tag 6). Danach liefert jeder Kurstag einen Baustein an genau diesem Projekt, bis zur Präsentation vor Jury an Tag 16. Leitmodell ist <a href="#rahmenmodelle">«Vom Use Case zum Werkzeug»</a>: von Stufe 2 (einzelne Use Cases) zu Stufe 3 (eigene Werkzeuge, die dauerhaft laufen).</p>
+
+  <div class="kf">
+    <h4>1 · KI-Grundverständnis</h4>
+    <p class="claim">Wie Sprachmodelle funktionieren und was das für die Arbeit bedeutet.</p>
+    <p class="im-cas"><b>Im CAS:</b> Tag 1 (Einführung), Tag 12 (Organisation und Führung)</p>
+    <div class="tw"><table>
+      <thead><tr><th>Bloom-Stufe</th><th>Wissensziel</th></tr></thead>
+      <tbody>
+        <tr><td class="c">Erinnern</td><td>Nennt die zentralen Begriffe: LLM, Token, Kontextfenster, Halluzination, RAG, Agent.</td></tr>
+        <tr><td class="c">Verstehen</td><td>Erklärt das Wortvorhersage-Prinzip und leitet daraus ab, warum Halluzinationen kein Fehler, sondern eine Eigenschaft sind.</td></tr>
+        <tr><td class="c">Verstehen</td><td>Beschreibt die Modelllandschaft und ordnet ein, was Deskilling-Risiken für Teams bedeuten.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="kf">
+    <h4>2 · Prompting-Handwerk</h4>
+    <p class="claim">Präzise Briefings formulieren, die zuverlässig das gewünschte Resultat liefern.</p>
+    <p class="im-cas"><b>Im CAS:</b> Tag 1 (CORE+, Reverse Prompt Engineering), Tag 3 (Advanced Prompt Engineering), Tag 6 (Hackathon)</p>
+    <div class="tw"><table>
+      <thead><tr><th>Bloom-Stufe</th><th>Wissensziel</th></tr></thead>
+      <tbody>
+        <tr><td class="c">Erinnern</td><td>Nennt die fünf CORE+-Felder und die Grundtechniken Zero-Shot, Few-Shot, Chain-of-Thought.</td></tr>
+        <tr><td class="c">Anwenden</td><td>Wendet CORE+ und Few-Shot auf eigene Marketing-Aufgaben an und setzt Deep Research als Recherchevorstufe ein.</td></tr>
+        <tr><td class="c">Erschaffen</td><td>Baut Master-Prompts und Prompt-Chains für eine Kampagne und legt sie in einer versionierten Prompt-Library ab.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="kf">
+    <h4>3 · Context Engineering und Skills</h4>
+    <p class="claim">Der KI dauerhaft beibringen, wer das Unternehmen ist, wie es klingt und was es weiss.</p>
+    <p class="im-cas"><b>Im CAS:</b> Tag 3 (Master-Prompts), Tag 5 (Prompting für Entwicklungsumgebungen), Tag 7/8 (Brand in Video und Bild), Tag 9 (RAG), Tag 10 (Workflows), Tag 13 (Content-Optimierung)</p>
+    <div class="tw"><table>
+      <thead><tr><th>Bloom-Stufe</th><th>Wissensziel</th></tr></thead>
+      <tbody>
+        <tr><td class="c">Verstehen</td><td>Erklärt den Unterschied zwischen Prompt Engineering (einzelner Befehl) und Context Engineering (Informations-System).</td></tr>
+        <tr><td class="c">Anwenden</td><td>Bindet Styleguide und Markenregeln in Text-, Bild- und Video-Workflows ein und prüft Ausgaben auf Markenkonformität.</td></tr>
+        <tr><td class="c">Erschaffen</td><td>Baut ein RAG-Grundgerüst auf eigenen Daten, inklusive Chunking-Strategie und Halluzinationstest.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="kf">
+    <h4>4 · Kritisches Urteil und Modellwahl</h4>
+    <p class="claim">Output prüfen statt übernehmen, und für jede Aufgabe das richtige Werkzeug wählen.</p>
+    <p class="im-cas"><b>Im CAS:</b> durchgehend; Schwerpunkte an Tag 2, 3, 7/8, 9, 11, 14, 15 und 16</p>
+    <div class="tw"><table>
+      <thead><tr><th>Bloom-Stufe</th><th>Wissensziel</th></tr></thead>
+      <tbody>
+        <tr><td class="c">Verstehen</td><td>Erklärt die typischen Fehlerquellen: Halluzination, Bias, veraltetes Wissen, Scheinmetriken.</td></tr>
+        <tr><td class="c">Analysieren</td><td>Prüft KI-Output systematisch (Halluzinationstest, Bewertungsraster für Varianten), bevor er publiziert wird.</td></tr>
+        <tr><td class="c">Evaluieren</td><td>Beurteilt pro Aufgabe Modell, Modus und Tool nach Nutzen, Kosten, Kontrollgrad und Datenschutz.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="kf">
+    <h4>5 · Datenschutz, Recht, Richtlinien</h4>
+    <p class="claim">Wissen, welche Daten in welche Tools dürfen, und das im Unternehmen verbindlich regeln.</p>
+    <p class="im-cas"><b>Im CAS:</b> Tag 4 (Compliance), Tag 9 (eigene Daten im RAG), Tag 13 (Content Safety), Tag 15 (Datenhandling); Kapitel 6 der Dokumentation</p>
+    <div class="tw"><table>
+      <thead><tr><th>Bloom-Stufe</th><th>Wissensziel</th></tr></thead>
+      <tbody>
+        <tr><td class="c">Erinnern</td><td>Nennt die acht swissAI-Prüffragen und die Kernpflichten aus DSG und EU AI Act für Marketinganwendungen.</td></tr>
+        <tr><td class="c">Verstehen</td><td>Erklärt, warum Consumer-Abos und Unternehmenslösungen datenschutzrechtlich unterschiedlich zu bewerten sind.</td></tr>
+        <tr><td class="c">Evaluieren</td><td>Beurteilt Tools und Anwendungsfälle mit dem Prüfschema und definiert Human-in-the-Loop-Punkte.</td></tr>
+        <tr><td class="c">Erschaffen</td><td>Erstellt Compliance-Checkliste und Governance-Regeln (Prompt-Library, Freigaben) für das eigene Projekt.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="kf">
+    <h4>6 · Strategische Integration</h4>
+    <p class="claim">KI vom Einzeltrick zum System machen, das das Unternehmen trägt und dessen Wirkung messbar ist.</p>
+    <p class="im-cas"><b>Im CAS:</b> Tag 2 (Leit-KPI), Tag 4 (Business Case), Tag 5/6 (Prototyp), Tag 10/11 (Automatisierung, Agenten), Tag 12 (Change), Tag 14 (Transfer), Tag 15 (Dashboards), Tag 16 (Pitch)</p>
+    <div class="tw"><table>
+      <thead><tr><th>Bloom-Stufe</th><th>Wissensziel</th></tr></thead>
+      <tbody>
+        <tr><td class="c">Analysieren</td><td>Analysiert die eigene Marketing-Challenge, legt Leit-KPI und Baseline fest und übersetzt sie in einen Business Case.</td></tr>
+        <tr><td class="c">Evaluieren</td><td>Beurteilt ROI, Risiken und Verankerung des Systems und entwickelt eine Change-Roadmap, die das Team mitnimmt.</td></tr>
+        <tr><td class="c">Erschaffen</td><td>Baut einen durchgängigen Workflow oder Agenten mit Human-in-the-Loop-Punkt und weist die Wirkung über ein Dashboard nach.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <h3>Lesehilfe zur Bloomschen Taxonomie</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Stufe</th><th>Bedeutet</th><th>Typische Verben</th></tr></thead>
+    <tbody>
+      <tr><td class="c">1 Erinnern</td><td>Fakten und Begriffe abrufen</td><td>nennen, aufzählen, wiedergeben</td></tr>
+      <tr><td class="c">2 Verstehen</td><td>Zusammenhänge erklären können</td><td>erklären, beschreiben, einordnen</td></tr>
+      <tr><td class="c">3 Anwenden</td><td>Technik auf neue Fälle übertragen</td><td>anwenden, einsetzen, durchführen</td></tr>
+      <tr><td class="c">4 Analysieren</td><td>Zerlegen und Muster erkennen</td><td>analysieren, vergleichen, extrahieren</td></tr>
+      <tr><td class="c">5 Evaluieren</td><td>Nach Kriterien begründet urteilen</td><td>beurteilen, bewerten, auswählen</td></tr>
+      <tr><td class="c">6 Erschaffen</td><td>Neues entwickeln und kombinieren</td><td>entwickeln, entwerfen, bauen</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="rahmenmodelle">
+  <h2><span class="n">3</span>Rahmenmodelle</h2>
+  <p class="lead">Im Unterricht, in den Unterlagen und in der Bewertung tauchen immer wieder dieselben Modelle auf. Hier stehen alle auf einen Blick, damit kein Begriff unverständlich bleibt. Einmal lesen genügt, auswendig können musst du sie nicht.</p>
+  <div class="grid2">
+    <div class="card">
+      <h4>Vom Use Case zum Werkzeug</h4>
+      <p class="sub">Leitmodell des CAS</p>
+      <p>Fünf Reifestufen: Neugier → Use Case → Werkzeug → Infrastruktur → Unsichtbar. Reife heisst: Die Organisation redet nicht mehr über KI, sie arbeitet damit.</p>
+      <p>Der CAS führt dich von Stufe 2 zu Stufe 3. Darum zählen ab Tag 2 nur Marketing-KPIs, keine KI-KPIs.</p>
+    </div>
+    <div class="card">
+      <h4>CORE+</h4>
+      <p class="sub">Briefing-Schema · ab Tag 1</p>
+      <p>Character, Objective, Rules, Example, + Talk: Rolle, Ziel, Regeln, Beispiel, Dialog. Das Schema für jeden Prompt.</p>
+      <p>Gemeinsames Vokabular ab Tag 1; Tag 3 baut darauf Master-Prompts und Chains. Details und Übungen in den <a href="#grundlagen">Prompt-Grundlagen</a>.</p>
+    </div>
+    <div class="card">
+      <h4>FERC</h4>
+      <p class="sub">Arbeitsrhythmus · jeder Kurstag</p>
+      <p>Frame, Explore, Refine, Commit: Ziel setzen, Alternativen erzeugen, vergleichen, verantwortet entscheiden. Nie die erste Antwort nehmen.</p>
+      <p>Nach Tag 3 schreibst du eine benotete FERC-Reflexion (10 % der Note); an Tag 12 ist FERC der Denkrahmen für Human Authorship und Deskilling.</p>
+    </div>
+    <div class="card">
+      <h4>Double Diamond</h4>
+      <p class="sub">Design-Prozess · Tag 1 und Hackathon</p>
+      <p>Discover, Define, Develop, Deliver: zweimal öffnen und schliessen. Erst das richtige Problem finden, dann die richtige Lösung.</p>
+      <p>Im CAS die Brücke zu FERC an Tag 1 und die Sprint-Struktur am Hackathon (Tag 6).</p>
+    </div>
+    <div class="card">
+      <h4>Human-in-the-Loop</h4>
+      <p class="sub">Systemprinzip · Pflichtteil der Dokumentation</p>
+      <p>Drei Fragen an jedes KI-System: Wo entscheidet der Mensch? Was darf das System nie? Woran merken wir Fehler?</p>
+      <p>Jeder Workflow und jeder Agent im CAS bekommt einen definierten Freigabepunkt (Kapitel 3 der Dokumentation).</p>
+    </div>
+    <div class="card">
+      <h4>DSG und EU AI Act</h4>
+      <p class="sub">Rechtlicher Rahmen · Tag 4, Kapitel 6</p>
+      <p>Datenbearbeitung, Profiling, Kennzeichnung generierter Inhalte. Als Checkliste dienen die acht swissAI-Prüffragen.</p>
+      <p>Bis Tag 4 gilt die einfache Regel: keine Kunden- oder Personendaten in Consumer-Abos.</p>
+    </div>
+  </div>
+  <div class="note blue"><b>swissAI-Arbeitsmaterial:</b> Drei frei zugängliche Ressourcen dienen im CAS als Arbeitsmaterial: das KI-Strategie-Paket (Canvas, Bewertungsraster, Governance-Check, für Tag 4 und 12), die Übersicht «Schweizer KI-Chats» (16 Chats, bewertet mit den acht Prüffragen) und die Übersicht «Offene KI-Modelle» (für Modellentscheide an Tag 3, 9 und 11). Bezugsquellen unter <a href="#quellen">Quellen</a>.</div>
+</section>
+
+<section id="grundlagen">
+  <h2><span class="n">4</span>Prompt-Grundlagen</h2>
+  <p class="lead">Pflichtlektüre. Ziel: Du verstehst, wie du ein Sprachmodell präzise steuerst, kennst CORE+ als gemeinsames Vokabular des CAS und hast die Grundtechniken selbst ausprobiert. Ein Sprachmodell ist ein Gegenüber, das gebrieft werden will: Wer eine Agentur sauber briefen kann, kann auch ein Sprachmodell briefen.</p>
+
+  <h3>CORE+: das Briefing-Schema des CAS</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Feld</th><th>Bedeutet</th><th>Beispiel</th></tr></thead>
+    <tbody>
+      <tr><td class="c"><b>C</b> Character</td><td>Rolle und Perspektive der KI</td><td>«Du bist Marketingleiterin eines Schweizer KMU.»</td></tr>
+      <tr><td class="c"><b>O</b> Objective</td><td>Ziel der Aufgabe</td><td>«Erstelle 3 Betreffzeilen, die die Öffnungsrate erhöhen.»</td></tr>
+      <tr><td class="c"><b>R</b> Rules</td><td>Regeln und Grenzen</td><td>«Maximal 45 Zeichen, kein Ausrufezeichen, per Sie.»</td></tr>
+      <tr><td class="c"><b>E</b> Example</td><td>Beispiele für das Gewünschte</td><td>«So klingt eine gute Betreffzeile von uns: …»</td></tr>
+      <tr><td class="c"><b>+</b> Talk</td><td>Dialog statt Einwegbefehl</td><td>«Stelle mir zuerst Rückfragen, bevor du beginnst.»</td></tr>
+    </tbody>
+  </table></div>
+  <p><b>Merke:</b> Langer Kontext gehört an den <b>Anfang</b> des Prompts, die eigentliche Aufgabe kommt <b>zum Schluss</b>. Und das «+» ist der am meisten unterschätzte Teil: Lass dich von der KI interviewen, bevor sie arbeitet.</p>
+
+  <h3>Die vier Grundprinzipien</h3>
+  <ul>
+    <li><b>Kontext ist König.</b> Gib der KI alle relevanten Hintergrundinformationen. Die häufigste Ursache für schwache Resultate ist fehlender Kontext, nicht ein schlechtes Modell.</li>
+    <li><b>Beispiele schlagen Adjektive.</b> Zeige der KI 1 bis 3 Beispiele (Few-Shot), statt abstrakt zu beschreiben, was du willst.</li>
+    <li><b>Klarheit gewinnt.</b> Zerlege grosse Aufgaben in kleine, klare Häppchen (Chunking). Ein Prompt, eine Aufgabe.</li>
+    <li><b>Struktur hilft.</b> Abschnitte oder Tags wie <code>&lt;aufgabe&gt;</code> und <code>&lt;kontext&gt;</code> helfen der KI, deinen Prompt sauber zu lesen. An Tag 3 treiben wir das mit JSON- und XML-Prompts weiter.</li>
+  </ul>
+
+  <h3>Die Grundtechniken</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Technik</th><th>Was es ist</th><th>Wann einsetzen</th></tr></thead>
+    <tbody>
+      <tr><td>Zero-Shot</td><td>Aufgabe ohne Beispiele</td><td>Einfache Standardaufgaben</td></tr>
+      <tr><td>Few-Shot</td><td>Aufgabe mit 1 bis 3 Beispielen</td><td>Stil, Format oder Ton vorgeben</td></tr>
+      <tr><td>Chain-of-Thought</td><td>KI denkt Schritt für Schritt</td><td>Analysen, Rechnungen, komplexe Entscheide</td></tr>
+      <tr><td>Reverse Prompt Engineering</td><td>Gutes Ergebnis rein, Prompt raus</td><td>Du weisst, wie das Resultat aussehen soll, aber nicht, wie du hinkommst (Tag 1)</td></tr>
+      <tr><td>Deep Research</td><td>KI recherchiert mehrstufig mit Quellen</td><td>Recherche-Vorstufe für präzise Prompts (Tag 3)</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Dos und Don'ts</h3>
+  <div class="grid2">
+    <div class="card field"><h4>Dos</h4>
+      <ul style="margin:0;padding-left:18px;font-size:14.5px">
+        <li>Klare Sprache und strukturierte Prompts nutzen</li>
+        <li>Kontext angeben und Beispiele einbauen</li>
+        <li>Varianten erzeugen und vergleichen (FERC), statt die erste Antwort zu nehmen</li>
+        <li>Eigene Fehler analysieren und Prompts iterativ verfeinern</li>
+      </ul>
+    </div>
+    <div class="card field"><h4>Don'ts</h4>
+      <ul style="margin:0;padding-left:18px;font-size:14.5px">
+        <li>Zu vage oder allgemein bleiben</li>
+        <li>Nur Theorie lesen, ohne zu testen</li>
+        <li>Modellantworten ungeprüft übernehmen</li>
+        <li>Kundendaten oder Personendaten in Consumer-Abos eingeben (mehr an Tag 4)</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Übungen (ca. 30 Minuten)</h3>
+  <ol style="max-width:72ch">
+    <li><b>CORE+ komplett:</b> Nimm eine echte Aufgabe aus deinem Marketingalltag und schreibe einen Prompt mit allen fünf CORE+-Feldern. Vergleiche das Resultat mit einem Einzeiler-Prompt zur selben Aufgabe.</li>
+    <li><b>Few-Shot-Effekt:</b> Lass dir einen LinkedIn-Post zu einem Fachthema schreiben, einmal ohne, einmal mit zwei Beispiel-Posts von dir. Notiere den Unterschied.</li>
+    <li><b>Talk-Technik:</b> Gib der KI eine Aufgabe mit dem Zusatz «Stelle mir zuerst 5 Rückfragen, bevor du beginnst». Beantworte die Fragen und vergleiche das Ergebnis mit dem Direktversuch.</li>
+    <li><b>Mini-FERC:</b> Lass dir zu Übung 1 drei Varianten geben, wähle die beste und notiere in einem Satz, warum. Genau das machst du ab Tag 1 an deiner Challenge.</li>
+  </ol>
+
+  <h3>Glossar</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Begriff</th><th>Erklärung</th></tr></thead>
+    <tbody>
+      <tr><td class="c">Prompt</td><td>Texteingabe zur Steuerung der KI</td></tr>
+      <tr><td class="c">LLM</td><td>Large Language Model, grosses Sprachmodell</td></tr>
+      <tr><td class="c">Token</td><td>Kleinste Texteinheit, in der ein Modell rechnet</td></tr>
+      <tr><td class="c">Kontextfenster</td><td>Menge an Text, die ein Modell gleichzeitig «sieht»</td></tr>
+      <tr><td class="c">CORE+</td><td>Briefing-Schema des CAS: Character, Objective, Rules, Example, + Talk</td></tr>
+      <tr><td class="c">FERC</td><td>Arbeitsrhythmus des CAS: Frame, Explore, Refine, Commit</td></tr>
+      <tr><td class="c">Chunking</td><td>Grosse Aufgaben in kleine, klare Teilschritte zerlegen</td></tr>
+      <tr><td class="c">Few-Shot</td><td>Technik mit Beispielen im Prompt</td></tr>
+      <tr><td class="c">Chain-of-Thought</td><td>Denkprozess Schritt für Schritt im Prompt</td></tr>
+      <tr><td class="c">Master-Prompt</td><td>Wiederverwendbarer Kontext-Container, kommt an Tag 3</td></tr>
+      <tr><td class="c">Prompt-Chain</td><td>Mehrere Prompts als Produktionskette, kommt an Tag 3</td></tr>
+      <tr><td class="c">Halluzination</td><td>Falsche, aber plausibel klingende KI-Antwort</td></tr>
+      <tr><td class="c">RAG</td><td>Retrieval-Augmented Generation, KI antwortet aus deinen Daten (Tag 9)</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="checkliste">
+  <h2><span class="n">5</span>Vorbereitungs-Checkliste</h2>
+  <p class="lead">Bring diese Punkte erledigt und dieses Material an den ersten Kurstag mit. Wir arbeiten von Beginn an mit deiner echten Marketing-Challenge. Grundsatz bei allen Tools: Abos zahlen Teilnehmende selbst, für die Tages-Tools reicht meist ein Trial. Die Dozierenden geben ihre Toolwahl jeweils zwei Wochen vor dem Kurstag bekannt. Deine Haken bleiben in diesem Browser gespeichert.</p>
+
+  <h3>Bis Tag 1 (02.09.) zwingend</h3>
+  <ul class="check" data-group="t1">
+    <li><label><input type="checkbox"> Eigener Laptop (kein Tablet), geladen, mit funktionierendem WLAN-Zugang</label></li>
+    <li><label><input type="checkbox"> <span><b>Bezahl-Abo ChatGPT Plus oder Claude Pro</b> eingerichtet und getestet (ca. CHF 20/Monat, Deep Research muss verfügbar sein)</span></label></li>
+    <li><label><input type="checkbox"> <span><b>myHWZ-Login</b> funktioniert (myhwz.fh-hwz.ch), dort landen alle Unterlagen und Abgaben</span></label></li>
+    <li><label><input type="checkbox"> <span><b>Challenge-Pitch vorbereitet</b> gemäss <a href="#challenge">Challenge-Pitch</a>: Aufgabe, Zielsetzung, ROI-Schätzung, Ausgangspunkt (Abgabe am Ende von Tag 1)</span></label></li>
+  </ul>
+  <div class="note">Wichtig für den ganzen CAS: <b>Keine Kundendaten oder Personendaten in Consumer-Abos eingeben.</b> Was stattdessen geht, klären wir an Tag 4 (Compliance) mit den acht swissAI-Prüffragen.</div>
+
+  <h3>Eigenes Material</h3>
+  <ul class="check" data-group="mat">
+    <li><label><input type="checkbox"> 3 bis 5 eigene Texte: LinkedIn-Post, Kunden-E-Mail, Produktbeschreibung, Angebotstext</label></li>
+    <li><label><input type="checkbox"> Unternehmensziele in 3 bis 5 Sätzen: Wohin soll das Unternehmen in 1 bis 2 Jahren?</label></li>
+    <li><label><input type="checkbox"> Kurzbeschreibung der Strategie: Was macht ihr? Für wen? Was unterscheidet euch?</label></li>
+    <li><label><input type="checkbox"> Zielgruppen-Beschreibung: Wer ist euer typischer Kunde? Welches Problem hat er?</label></li>
+    <li><label><input type="checkbox"> <span><b>Styleguide oder Brand Guidelines als PDF</b> (für Tag 7 Video, Tag 8 Design, Tag 9 RAG; falls keiner existiert, liegt ein Beispiel im Materialpool)</span></label></li>
+    <li><label><input type="checkbox"> Zugriff auf die eigene Website oder ein Content-Beispiel (für Tag 13 Content Optimization)</label></li>
+  </ul>
+
+  <h3>Wissens-Voraussetzungen</h3>
+  <ul class="check" data-group="wissen">
+    <li><label><input type="checkbox"> Ich kenne das CORE+-Schema und habe die Übungen gemacht</label></li>
+    <li><label><input type="checkbox"> Ich verstehe Markdown-Grundlagen: Überschriften, Listen, Codeblöcke</label></li>
+    <li><label><input type="checkbox"> Ich kenne die wichtigsten Funktionen meines KI-Tools: Custom Instructions, Projekte, Canvas, Deep Research</label></li>
+    <li><label><input type="checkbox"> Ich habe mit mindestens einem zweiten KI-Tool gearbeitet (ChatGPT, Claude oder Gemini)</label></li>
+  </ul>
+
+  <h3>Tool-Ausblick: was im Semester noch dazukommt</h3>
+  <p>Nichts davon musst du vor Tag 1 einrichten. Die Liste zeigt, was auf dich zukommt, damit dich nichts überrascht:</p>
+  <div class="tw"><table>
+    <thead><tr><th>Vor Tag</th><th>Tool</th><th>Zweck</th></tr></thead>
+    <tbody>
+      <tr><td class="c">3</td><td>Prompt-Library-Konto (Notion, Google Doc oder Git)</td><td>Master-Prompts und Chains versionieren, Format wird an Tag 3 definiert</td></tr>
+      <tr><td class="c">5</td><td>Lovable (Free-Tier)</td><td>Low-Code-Prototyping, Mini-App für den Hackathon</td></tr>
+      <tr><td class="c">7 / 8</td><td>Testkonto Video- bzw. Bildgenerator</td><td>Toolwahl kommt 2 Wochen vorher von den Dozierenden</td></tr>
+      <tr><td class="c">9</td><td>n8n und Vector-DB (Free-Tier)</td><td>RAG bauen, gilt auch für Tag 10 und 11</td></tr>
+      <tr><td class="c">10</td><td>Screencast-Tool (z.B. Loom, OBS)</td><td>Pflichtanhang der Dokumentation</td></tr>
+      <tr><td class="c">11</td><td>CRM-Testkonto (z.B. HubSpot Free) und MCP-Client (z.B. Claude Desktop)</td><td>Agenten an Systeme anbinden, Setup-Anleitung kommt 1 Woche vorher</td></tr>
+      <tr><td class="c">15</td><td>Dashboard-Tool (z.B. Looker Studio)</td><td>KPI-Dashboard und Alerts</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="quellen">
+  <h2><span class="n">6</span>Laufende Quellen</h2>
+  <p class="lead">KI-Wissen veraltet schnell. Diese Quellen halten dich während des CAS und darüber hinaus auf dem Stand. Mehrere davon sind direktes Arbeitsmaterial im Unterricht.</p>
+
+  <h3>Pflicht während des CAS</h3>
+  <ul>
+    <li><b>swissAI Weekly:</b> Wöchentlicher KI-Überblick mit Schweiz-Fokus, erscheint freitags. Abonnieren auf <a href="https://www.swissai.ch" target="_blank" rel="noopener">swissai.ch</a>. Die Weekly-Themen greifen wir im Unterricht regelmässig auf.</li>
+    <li><b>swissAI Wiki (Member-Bereich):</b> Nachschlagewerk mit Kursunterlagen, Prompt-Bausteinen und Vertiefungsartikeln unter member.kimpact.ch. Zugang mit der swissAI-Mitgliedschaft.</li>
+    <li><b>swissAI KI-Strategie-Paket:</b> Use-Case-Canvas, Bewertungsraster, Governance-Check und elf Prompts. Gratis gegen E-Mail auf <a href="https://www.swissai.ch/ki-strategie" target="_blank" rel="noopener">swissai.ch/ki-strategie</a>. Wird an Tag 4 und 12 als Arbeitsmaterial gebraucht, lade es vorher herunter.</li>
+  </ul>
+
+  <h3>Referenzen, die im CAS immer wieder auftauchen</h3>
+  <ul>
+    <li><b>swissAI-Übersicht «Schweizer KI-Chats»:</b> Sechzehn Schweizer KI-Chats, bewertet mit acht Prüffragen. Grundlage der Compliance-Checkliste an Tag 4, Auswahlhilfe an Tag 9.</li>
+    <li><b>swissAI-Übersicht «Offene KI-Modelle»:</b> Offene Modelle nach Aufgabe, Deutschqualität und Lizenz, plus Hosting-Wege. Referenz für Modellentscheide an Tag 3, 9 und 11.</li>
+    <li><b>Anthropic- und OpenAI-Release-Notes:</b> Neue Modellversionen und Funktionen erscheinen im Wochenrhythmus. Einmal pro Woche überfliegen genügt.</li>
+  </ul>
+
+  <h3>Arbeitsweise: deine Prompt-Library</h3>
+  <p>Lege dir ab heute eine persönliche Prompt-Library an (Notion, Google Doc oder Git). Jeden Prompt, der gut funktioniert, speicherst du dort ab. An Tag 3 wird das verbindliche Format definiert, an Tag 4 wird die Library zum Governance-Objekt fürs Unternehmen. Wer mit einer gefüllten Library ankommt, hat einen Vorsprung.</p>
+</section>
+
+<section id="challenge">
+  <h2><span class="n">7</span>Challenge-Pitch</h2>
+  <p class="lead">Teil 1 der Zertifikatsarbeit. Abgabe am <b>Mittwoch, 2. September 2026, am Ende des ersten Kurstags</b> auf myHWZ. Bereite den Pitch vor dem Kursstart vor; am ersten Tag hast du 60 bis 90 Minuten Arbeitszeit, um ihn mit den Prompting-Grundlagen zu schärfen. Der Pitch ist Zulassungsbedingung für den CAS und der Startpunkt deiner Zertifikatsarbeit. Er wird nicht benotet, aber an Tag 2 von allen Mitteilnehmenden reviewt.</p>
+
+  <h3>Was du vorbereitest und am Tag 1 einreichst</h3>
+  <p>Eine Seite Text oder drei Folien mit diesen vier Punkten:</p>
+  <ol style="max-width:72ch">
+    <li><b>Die Aufgabe.</b> Welche reale Marketingaufgabe in deinem Unternehmen willst du mit einem KI-System lösen? Ein Satz, der mit «Wir schaffen es heute nicht, …» beginnt, ist ein guter Test.</li>
+    <li><b>Die Zielsetzung.</b> Woran merkt das Unternehmen in sechs Monaten, dass das System läuft? Eine Marketing-Kennzahl (Conversion, Reichweite, Kosten pro Lead, Durchlaufzeit), keine KI-Kennzahl.</li>
+    <li><b>Die ROI-Schätzung.</b> Grob und ehrlich: Was kostet es heute (Stunden, Franken, entgangene Chancen), was könnte es nach dem System kosten, was kostet das System selbst? Du überprüfst diese Schätzung am Ende des CAS in Kapitel 2 deiner Dokumentation.</li>
+    <li><b>Dein Ausgangspunkt.</b> Was hast du mit KI dazu schon versucht, und woran ist es gescheitert?</li>
+  </ol>
+
+  <h3>So wird es reviewt</h3>
+  <p>An Tag 2 präsentierst du den Pitch in fünf Minuten. Jede Mitteilnehmende bewertet ihn mit dem Peer-Review-Bogen nach drei Kriterien: Ist die Aufgabe konkret genug, um sie zu bauen? Ist die Kennzahl eine Marketing-Kennzahl? Ist die ROI-Schätzung nachvollziehbar?</p>
+
+  <h3>Was danach passiert</h3>
+  <p>Am Hackathon (Tag 6) baust du den ersten Prototyp. Bis dahin kannst du die Challenge noch wechseln, danach nur mit Zustimmung der Studienleitung. Alle Kurstage liefern Bausteine zu genau dieser Challenge.</p>
+
+  <h3>Bewertungsraster der Zertifikatsarbeit (zur Orientierung)</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Kriterium</th><th>Gewicht</th></tr></thead>
+    <tbody>
+      <tr><td>Problem und Business Case (inkl. Überprüfung der ROI-Schätzung)</td><td class="c">20 %</td></tr>
+      <tr><td>Systemarchitektur mit Human-in-the-Loop</td><td class="c">25 %</td></tr>
+      <tr><td>Marketingwirkung und Messung</td><td class="c">20 %</td></tr>
+      <tr><td>Umsetzung und Reproduzierbarkeit</td><td class="c">15 %</td></tr>
+      <tr><td>Verantwortung: Offenlegung, Compliance, Verankerung</td><td class="c">10 %</td></tr>
+      <tr><td>Präsentation mit ROI-Betrachtung</td><td class="c">10 %</td></tr>
+    </tbody>
+  </table></div>
+  <p>Die Zertifikatsarbeit zählt 80 % der Gesamtnote (Dokumentation 50, Präsentation 30). Dazu kommen eine FERC-Reflexion nach Tag 3 (10 %) und ein Werkzeug-Transfer bis 20. November (10 %). Die Vorlagen dafür bekommst du am ersten Kurstag.</p>
+</section>
+
+</main>
+
+<footer>
+  <div class="in">
+    <span>CAS Advanced AI in Marketing · HWZ Hochschule für Wirtschaft Zürich</span>
+    <span>Studiengangsleitung Chris Beyeler · Stand 27.08.2026</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Checklisten-Haken pro Browser merken
+  var KEY="cas-aaim-prereading-checks";
+  var state={};
+  try{state=JSON.parse(localStorage.getItem(KEY)||"{}")||{}}catch(e){state={}}
+  document.querySelectorAll(".check").forEach(function(ul){
+    var g=ul.getAttribute("data-group");
+    ul.querySelectorAll("li").forEach(function(li,i){
+      var cb=li.querySelector("input"),id=g+"-"+i;
+      if(state[id]){cb.checked=true;li.classList.add("done")}
+      cb.addEventListener("change",function(){
+        li.classList.toggle("done",cb.checked);
+        state[id]=cb.checked;
+        try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}
+      });
+    });
+  });
+  // Aktiven Abschnitt in der Navigation markieren
+  var links=[].slice.call(document.querySelectorAll("nav.toc a"));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute("href"))});
+  function mark(){
+    var y=window.scrollY+90,cur=0;
+    secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i});
+    links.forEach(function(a,i){a.classList.toggle("on",i===cur)});
+  }
+  window.addEventListener("scroll",mark,{passive:true});
+  mark();
+})();
+</script>
+</body>
+</html>
