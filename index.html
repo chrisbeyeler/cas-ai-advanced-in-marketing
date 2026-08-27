@@ -32,19 +32,25 @@ nav.side a{color:#fff;text-decoration:none;padding:9px 12px;border-radius:6px;fo
 nav.side a:hover{background:rgba(255,255,255,.12)}
 nav.side a.active{background:#fff;color:var(--hwz)}
 nav.side a .n{font-family:var(--mono);font-size:10px;opacity:.7;text-align:right;flex-shrink:0}
+nav.side .navgrp{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;opacity:.7;margin:10px 0 2px;padding:0 12px}
+nav.side details.navgrp2 summary{cursor:pointer;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;opacity:.7;margin:10px 0 2px;padding:0 12px;list-style:none}
+nav.side details.navgrp2 summary::before{content:"▸ "}
+nav.side details.navgrp2[open] summary::before{content:"▾ "}
 nav.side .foot{margin-top:auto;font-size:11px;opacity:.75;line-height:1.5}
-main{padding:0 0 80px}
+main{padding:0 0 80px;min-width:0}
+footer.site{padding:26px 48px;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-2)}
 header.top{padding:34px 48px 26px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
 header.top h1{font-family:var(--disp);font-weight:600;font-size:30px;margin:0;letter-spacing:-.01em}
-header.top .meta{font-family:var(--mono);font-size:12px;color:var(--ink-2)}
+header.top .meta{font-family:var(--mono);font-size:13px;color:var(--ink-2)}
 section.view{display:none;padding:34px 48px}
 section.view.active{display:block}
 h2{font-family:var(--disp);font-weight:600;font-size:22px;margin:0 0 6px}
 h3{font-size:15px;font-weight:600;margin:24px 0 8px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2)}
 p.lead{color:var(--ink-2);max-width:72ch;margin:0 0 22px}
-.mono{font-family:var(--mono);font-size:12px}
+.mono{font-family:var(--mono);font-size:13px}
+.tbl-wrap{overflow-x:auto}
 .muted{color:var(--ink-2)}
-.tag{display:inline-block;font-family:var(--mono);font-size:11px;padding:2px 8px;border-radius:3px;background:var(--field-2);color:var(--ink);white-space:nowrap}
+.tag{display:inline-block;font-family:var(--mono);font-size:12px;padding:2px 8px;border-radius:3px;background:var(--field-2);color:var(--ink);white-space:nowrap}
 .tag.b-pm{background:var(--pm);color:#fff}.tag.b-sl{background:var(--sl);color:#fff}.tag.b-ct{background:var(--ct);color:#fff}.tag.b-aa{background:var(--aa);color:#fff}.tag.b-px{background:var(--px);color:#fff}
 .tag.ln{border:1px solid var(--line);background:#fff}
 .tag.warn{background:#FFF4D6;color:#6B4E00}.tag.err{background:#FDE7E5;color:#7A1A14}.tag.ok{background:#DDF3EC;color:#0B5A46}
@@ -55,10 +61,10 @@ p.lead{color:var(--ink-2);max-width:72ch;margin:0 0 22px}
 .band .cell:hover{transform:translateY(-3px)}
 .band .cell.half{background-image:repeating-linear-gradient(135deg,transparent 0 6px,rgba(255,255,255,.18) 6px 8px)}
 .band .cell.coach{color:var(--ink);background:var(--field-2);border:1px dashed var(--ink-2)}
-.band .cell .d{font-family:var(--mono);font-size:11px;opacity:.9;display:flex;justify-content:space-between}
+.band .cell .d{font-family:var(--mono);font-size:12px;opacity:.9;display:flex;justify-content:space-between}
 .band .cell .t{font-weight:600;font-size:12px;line-height:1.25;margin-top:auto}
 .band .cell .who{font-size:11px;opacity:.85}
-.band .kw{font-family:var(--mono);font-size:10px;opacity:.7}
+.band .kw{font-family:var(--mono);font-size:11px;opacity:.7}
 .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--ink-2);margin-bottom:26px}
 .legend span i{display:inline-block;width:12px;height:12px;border-radius:2px;vertical-align:-2px;margin-right:5px}
 
@@ -72,13 +78,13 @@ p.lead{color:var(--ink-2);max-width:72ch;margin:0 0 22px}
 .card ul{margin:6px 0 0;padding-left:18px}
 .card li{margin:3px 0}
 .kv{display:grid;grid-template-columns:130px 1fr;gap:4px 12px;font-size:14px}
-.kv dt{color:var(--ink-2);font-family:var(--mono);font-size:12px;padding-top:2px}
+.kv dt{color:var(--ink-2);font-family:var(--mono);font-size:13px;padding-top:2px}
 .kv dd{margin:0}
 
 /* Tables */
 table{border-collapse:collapse;width:100%;font-size:13.5px}
 th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
-th{font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2);font-weight:500;background:var(--field)}
+th{font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2);font-weight:500;background:var(--field)}
 tr:hover td{background:#FAFBFD}
 .matrix th.rot{height:120px;white-space:nowrap;vertical-align:bottom;padding:0}
 .matrix th.rot div{transform:rotate(-60deg);transform-origin:left bottom;width:24px;margin-left:12px}
@@ -95,7 +101,7 @@ tr:hover td{background:#FAFBFD}
 .day-head{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap;padding:20px 24px;border-radius:8px;color:#fff;margin-bottom:18px}
 .day-head .big{font-family:var(--disp);font-size:54px;font-weight:700;line-height:1;opacity:.5}
 .day-head h2{color:#fff;font-size:26px;margin:0}
-.day-head .meta{font-family:var(--mono);font-size:12px;opacity:.9;margin-top:4px}
+.day-head .meta{font-family:var(--mono);font-size:13px;opacity:.9;margin-top:4px}
 .ferc{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
 .ferc div{background:var(--field);border-radius:6px;padding:10px 12px;font-size:13px}
 .ferc b{display:block;font-family:var(--mono);font-size:11px;color:var(--hwz);margin-bottom:3px}
@@ -139,14 +145,38 @@ tr:hover td{background:#FAFBFD}
 .curfields{display:flex;flex-direction:column;gap:6px}
 .cf{display:grid;grid-template-columns:190px 1fr 36px;gap:10px;align-items:start;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:#fff}
 .cf.ok{background:#F1FAF6;border-color:#9FD6C1}
-.cf-l{font-family:var(--mono);font-size:12px;color:var(--ink-2);display:flex;gap:6px;align-items:flex-start;cursor:pointer;padding-top:2px}
+.cf-l{font-family:var(--mono);font-size:13px;color:var(--ink-2);display:flex;gap:6px;align-items:flex-start;cursor:pointer;padding-top:2px}
 .cf-v{font-size:13.5px}.cf-v ul{margin:0;padding-left:18px}.cf-v li{margin:2px 0}
 .cf-c{border:1px solid var(--line);background:#fff;border-radius:5px;width:32px;height:30px;cursor:pointer;color:var(--hwz);display:flex;align-items:center;justify-content:center}
 .cf-c:hover{background:var(--field)}
 .note{border-left:3px solid var(--warn);background:#FFF9E8;padding:10px 14px;border-radius:0 6px 6px 0;font-size:13.5px;margin:12px 0}
 .print{display:none}
-@media (max-width:980px){.shell{grid-template-columns:1fr}nav.side{position:static;height:auto;flex-direction:row;flex-wrap:wrap;padding:16px}nav.side .sub,nav.side .foot{display:none}nav.side .logo{margin:0 10px 0 0}.band{grid-template-columns:repeat(3,minmax(0,1fr))}.person{grid-template-columns:1fr}header.top,section.view{padding-left:20px;padding-right:20px}.ferc{grid-template-columns:1fr 1fr}}
-@media print{nav.side{display:none}.shell{grid-template-columns:1fr}section.view{display:block!important;page-break-before:always}}
+
+/* Dozierenden-Startseite */
+.doz-head{padding:22px 26px;border-radius:8px;background:var(--hwz);color:#fff;margin-bottom:18px}
+.doz-head h2{color:#fff;margin:0 0 4px}
+.doz-head .meta{font-family:var(--mono);font-size:13px;opacity:.9}
+.frist-ok{color:var(--ink)}
+.frist-warn{background:#FFF4D6;color:#6B4E00;font-weight:600}
+.frist-err{background:#FDE7E5;color:#7A1A14;font-weight:600}
+.doz-day{border:1px solid var(--line);border-radius:8px;padding:18px 20px;margin-bottom:14px;background:#fff}
+.doz-day h4{margin:0 0 8px;font-size:17px}
+.doz-day .btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;align-items:center}
+.doz-foot{border-top:1px solid var(--line);margin-top:22px;padding-top:16px;font-size:13.5px;color:var(--ink-2)}
+.btn-tag{text-decoration:none;font-size:13px;padding:6px 12px;cursor:pointer;border:1px solid var(--line)}
+
+@media (max-width:980px){.shell{grid-template-columns:1fr}nav.side{position:static;height:auto;flex-direction:row;flex-wrap:wrap;padding:16px}nav.side .sub,nav.side .foot{display:none}nav.side .logo{margin:0 10px 0 0}nav.side .navgrp,nav.side details.navgrp2 summary{margin:0;padding:9px 4px}.band{grid-template-columns:repeat(3,minmax(0,1fr))}.person{grid-template-columns:1fr}header.top,section.view,footer.site{padding-left:20px;padding-right:20px}.ferc{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){
+  .band{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cf{grid-template-columns:1fr}
+  .cf-c{justify-self:start}
+  .day-nav{flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px}
+  .prev-next{flex-direction:column;gap:10px}
+  .kv{grid-template-columns:110px 1fr}
+  .ferc{grid-template-columns:1fr}
+  .matrix th.rot{height:100px}
+}
+@media print{nav.side,.day-nav,.prev-next,button,.cf-c,.btns,footer.site,.no-print{display:none!important}.shell{grid-template-columns:1fr}main{padding:0}}
 </style>
 </head>
 <body>
@@ -154,22 +184,27 @@ tr:hover td{background:#FAFBFD}
 <nav class="side" aria-label="Bereiche">
   <span class="logo">HWZ</span>
   <div class="sub">CAS Advanced AI in Marketing<br>Dozierenden-Cockpit · Herbst 2026</div>
+  <div class="navgrp">Für Dozierende</div>
   <a href="#uebersicht" data-view="uebersicht">Übersicht <span class="n">16 Tage</span></a>
   <a href="#tage" data-view="tage">Kurstage <span class="n">Lernziele</span></a>
-  <a href="#dozierende" data-view="dozierende">Dozierende <span class="n">11</span></a>
-  <a href="#schnittthemen" data-view="schnittthemen">Schnittthemen <span class="n">7</span></a>
-  <a href="#transfer" data-view="transfer">Matrix <span class="n">Disziplinen</span></a>
-  <a href="#leistungsnachweise" data-view="leistungsnachweise">Leistungsnachweise <span class="n">LN</span></a>
-  <a href="#rahmen" data-view="rahmen">Rahmenmodelle <span class="n">FERC</span></a>
+  <a href="#material" data-view="material">Materialpool <span class="n">myHWZ</span></a>
   <a href="#downloads" data-view="downloads">Vorlagen <span class="n">myHWZ</span></a>
   <a href="#tools" data-view="tools">Tools <span class="n">Setup</span></a>
+  <a href="#dozierende" data-view="dozierende">Dozierende <span class="n">11</span></a>
+  <details class="navgrp2" id="nav-sl">
+    <summary>Hintergrund Studienleitung</summary>
+    <a href="#schnittthemen" data-view="schnittthemen">Schnittthemen <span class="n">7</span></a>
+    <a href="#transfer" data-view="transfer">Matrix <span class="n">Disziplinen</span></a>
+    <a href="#leistungsnachweise" data-view="leistungsnachweise">Leistungsnachweise <span class="n">LN</span></a>
+    <a href="#rahmen" data-view="rahmen">Rahmenmodelle <span class="n">FERC</span></a>
+  </details>
   <div class="foot">Stand 27.08.2026 · Studienleitung Chris Beyeler · Organisation Lara Mengarelli<br>Intern für Dozierende. Nicht zur Weitergabe.</div>
 </nav>
 <main>
 <header class="top">
   <div>
     <h1 id="page-title">Übersicht</h1>
-    <div class="meta">Start 02.09.2026 · Abschluss 11.12.2026 · 16 Studientage à 8 Lektionen auf 18 Terminen · Sihlhof Zürich · Kohorte 2026: 7 angemeldet, max. 10</div>
+    <div class="meta">Start 02.09.2026 · Abschluss 11.12.2026 · 16 Studientage à 8 Lektionen auf 18 Terminen · Sihlhof Zürich · Klasse: 7 angemeldet, max. 10</div>
   </div>
   <div class="meta">Quelle: Stundenplan V1.2 (27.08.2026), Modulaufbau-Matrix, Dozierendenprofile</div>
 </header>
@@ -196,7 +231,17 @@ tr:hover td{background:#FAFBFD}
   </div>
 
   <h3>Termine tabellarisch</h3>
-  <table id="termine"><thead><tr><th>Tag</th><th>Datum</th><th>Lek.</th><th>Block</th><th>Modul</th><th>Dozent:in</th><th>LN</th><th>Roter Faden: Beitrag zum Projekt</th></tr></thead><tbody></tbody></table>
+  <div class="tbl-wrap"><table id="termine"><thead><tr><th>Tag</th><th>Datum</th><th>Lek.</th><th>Block</th><th>Modul</th><th>Dozent:in</th><th>LN</th><th>Roter Faden: Beitrag zum Projekt</th></tr></thead><tbody></tbody></table></div>
+  <p class="mono muted" style="margin:8px 0 0">LN: P Pitch · X Umsetzung · R Reflexion · T Transfer · – kein Beitrag</p>
+</section>
+
+<section class="view" id="v-doz-home" data-title="Meine Startseite"></section>
+
+<section class="view" id="v-material" data-title="Materialpool">
+  <h2>Materialpool der Studienleitung</h2>
+  <p class="lead">Der Materialpool liegt auf <a href="https://myhwz.fh-hwz.ch/" target="_blank" rel="noopener">myHWZ</a>. Die inhaltlichen Grundlagen dazu stehen unter Rahmenmodelle. Die Tabelle zeigt, was es gibt, wofür es dient und ob es schon bereitliegt.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Material</th><th>Zweck</th><th>Tage</th><th>Status</th></tr></thead><tbody id="material-list"></tbody></table></div>
+  <a class="tag" style="text-decoration:none;font-size:13px;padding:6px 12px;margin-top:14px;display:inline-block" href="https://myhwz.fh-hwz.ch/" target="_blank" rel="noopener">myHWZ öffnen</a>
 </section>
 
 <section class="view" id="v-tage" data-title="Kurstage">
@@ -206,7 +251,7 @@ tr:hover td{background:#FAFBFD}
 
 <section class="view" id="v-dozierende" data-title="Dozierende">
   <h2>Elf Dozierende, ein Projekt pro Teilnehmer:in</h2>
-  <p class="lead">Pro Person: Einsätze, Rolle im Gesamtbogen, konkrete Aufgaben vor, während und nach dem Tag. Jeder Tag steht für sich. Kein Dozent liefert Inhalte für einen anderen Tag; was ein Tag als Input braucht, liegt im Materialpool der Studienleitung. Damit ist die Reihenfolge bei Terminverschiebungen egal. Absprachen unter Dozierenden dienen der Kenntnis, nicht der Lieferung.</p>
+  <p class="lead">Pro Person: Einsätze, Rolle im Gesamtbogen, konkrete Aufgaben vor, während und nach dem Tag. Jeder Tag steht für sich. Kein Dozent liefert Inhalte für einen anderen Tag; was ein Tag als Input braucht, liegt im <a href="#material" onclick="showView('material')">Materialpool</a> der Studienleitung. Damit ist die Reihenfolge bei Terminverschiebungen egal. Absprachen unter Dozierenden dienen der Kenntnis, nicht der Lieferung.</p>
   <div id="persons"></div>
 </section>
 
@@ -216,12 +261,14 @@ tr:hover td{background:#FAFBFD}
   <div id="clusters"></div>
   <h3>Wer unterrichtet was: Dozent × Thema</h3>
   <div style="overflow:auto"><table class="matrix" id="dt-matrix"></table></div>
+  <div class="note"><b>Pflege der Kursdaten:</b> Lernziele, Leitideen, Transfer, FERC und Dozierendendaten liegen doppelt: hier im Cockpit (Kurs-Repo: index.html und die Skill-Kopie <a href="https://github.com/chrisbeyeler/cas-ai-advanced-in-marketing/tree/main/skills/cas-ai-unterricht" target="_blank" rel="noopener">skills/cas-ai-unterricht</a>) und im Skill des BEYONDER-Marketplace (plugins/beyonder-skills/skills/cas-ai-unterricht/references/). Bei Änderungen an Kursdaten beide Orte nachführen.</div>
 </section>
 
 <section class="view" id="v-transfer" data-title="Matrix: Transfer ins klassische Marketing">
   <h2>Transfer ins klassische Marketing</h2>
   <p class="lead">Die Matrix aus dem Modulaufbau, ergänzt um den Hackathon-Tag. Sie zeigt, welche Marketing-Disziplinen ein Kurstag berührt. Schwerpunkte sind Content, Strategie, Communications und Development; SEA, GEO, E-Mail, Preis und Produkt werden nur gestreift. Die Aussenkommunikation sollte diesen Fokus abbilden und keine Breite versprechen, die der Stundenplan nicht hält.</p>
   <div style="overflow:auto"><table class="matrix" id="disc-matrix"></table></div>
+  <p class="mono muted" style="margin:8px 0 0">× = Disziplin am Tag behandelt, blau = 5 und mehr Tage.</p>
   <h3>Lesart für Dozierende</h3>
   <div class="grid g2">
     <div class="card"><h4>Wo die Disziplin trägt</h4><p style="font-size:14px;margin:0">Content (9 Tage), Strategie (7), Communications (6), Development (5). Wer eine dieser Disziplinen unterrichtet, kann sich auf Vorwissen aus anderen Tagen stützen. Bitte auf der Tagesseite nachschauen, welche Tage vorher dieselbe Disziplin berührt haben.</p></div>
@@ -231,23 +278,23 @@ tr:hover td{background:#FAFBFD}
 
 <section class="view" id="v-leistungsnachweise" data-title="Leistungsnachweise">
   <h2>Leistungsnachweise: Aufgabenstellung, Vorgaben, Bewertung</h2>
-  <p class="lead">Rahmen laut Studiendaten: Projektarbeit mit schriftlicher Dokumentation und Pitch vor Jury und Peers, 15 ECTS, Präsenzpflicht 80 Prozent. Die LN-Spalte der Matrix (P Pitch, X Umsetzung, R Reflexion, T Transfer) zeigt, welcher Kurstag welchem Baustein zuliefert. Entscheid vom 27.08.2026: drei Bausteine. A Zertifikatsarbeit 80 % (Dokumentation 50, Präsentation 30; Challenge-Pitch im Pre-Reading und Peer-Reviews an Tag 2 sind Zulassungsbedingung), B FERC-Reflexion 10 % (nach Tag 3), C Werkzeug-Transfer 10 % (Abgabe 20.11.). Die Abgaben sind so verteilt, dass kein Peak entsteht: 02.09., 03.09., 16.09., 20.11., 04.12., 11.12. Kohorte 2026: 7 angemeldet, maximal 10, also Einzelarbeiten und eine Jury.</p>
+  <p class="lead">Rahmen laut Studiendaten: Projektarbeit mit schriftlicher Dokumentation und Pitch vor Jury und Peers, 15 ECTS, Präsenzpflicht 80 Prozent. Die LN-Spalte der Matrix (P Pitch, X Umsetzung, R Reflexion, T Transfer) zeigt, welcher Kurstag welchem Baustein zuliefert. Entscheid vom 27.08.2026: drei Bausteine. A Zertifikatsarbeit 80 % (Dokumentation 50, Präsentation 30; Challenge-Pitch im Pre-Reading und Peer-Reviews an Tag 2 sind Zulassungsbedingung), B FERC-Reflexion 10 % (nach Tag 3), C Werkzeug-Transfer 10 % (Abgabe 20.11.). Die Abgaben sind so verteilt, dass kein Peak entsteht: 02.09., 03.09., 16.09., 20.11., 04.12., 11.12. Klasse 2026: 7 angemeldet, maximal 10, also Einzelarbeiten und eine Jury.</p>
   <h3>LN-Kalender: was wann entsteht</h3>
-  <table id="ln-cal"><thead><tr><th>Datum</th><th>Tag</th><th>Artefakt / Meilenstein</th><th>Baustein</th><th>Verantwortlich</th></tr></thead><tbody></tbody></table>
+  <div class="tbl-wrap"><table id="ln-cal"><thead><tr><th>Datum</th><th>Tag</th><th>Artefakt / Meilenstein</th><th>Baustein</th><th>Verantwortlich</th></tr></thead><tbody></tbody></table></div>
   <div id="ln-list" style="margin-top:26px"></div>
   <h3>Gewichtung und Kalender der Abgaben</h3>
-  <table><thead><tr><th>Baustein</th><th>Abgabe</th><th>Gewicht</th><th>Umfang</th></tr></thead><tbody>
+  <div class="tbl-wrap"><table><thead><tr><th>Baustein</th><th>Abgabe</th><th>Gewicht</th><th>Umfang</th></tr></thead><tbody>
     <tr><td>A1 Challenge-Pitch (vorbereitet im Pre-Reading)</td><td class="mono">02.09. (Tag 1, Abend)</td><td>Zulassung</td><td>1 Seite oder 3 Folien, mit ROI-Schätzung</td></tr>
     <tr><td>A2 Peer-Reviews der Pitches</td><td class="mono">03.09. (Tag 2)</td><td>Zulassung</td><td>Bogen pro Pitch</td></tr>
     <tr><td>B FERC-Reflexion</td><td class="mono">16.09.</td><td>10 %</td><td>2 Seiten + Vorher/Nachher-Anhang</td></tr>
     <tr><td>C Werkzeug-Transfer</td><td class="mono">20.11.</td><td>10 %</td><td>1 Seite + Screencast 2 Min.</td></tr>
     <tr><td>A3 Dokumentation</td><td class="mono">04.12.</td><td>50 %</td><td>12 bis 20 Seiten + Anhang</td></tr>
     <tr><td>A4 Präsentation mit ROI und Peer-Review</td><td class="mono">11.12. (Tag 16)</td><td>30 %</td><td>7 + 5 Minuten</td></tr>
-  </tbody></table>
+  </tbody></table></div>
   <div class="note">Kontrolliert wird eine einzige FERC-Reflexion nach Tag 3. Prüfungsformate gemäss HWZ-Weiterbildungsreglement: Note 1 bis 6, bestanden ab 4.0, Präsenz 80 Prozent; die Gewichtung ist mit der Studiengangsadministration zu bestätigen.</div>
   <h3>Abgleich mit dem ursprünglichen Konzept («CAS AI Marketing Advanced, Aufbau»)</h3>
   <p class="lead">Das ursprüngliche Konzept sah pro Kurstag einen eigenen Leistungsnachweis mit Abgabe «+5 Tage» vor. Die Tabelle zeigt, was davon in die Bausteine A und B eingeflossen ist, was entfällt und was noch offen ist.</p>
-  <table><thead><tr><th>Ursprünglich (Tag)</th><th>Status</th><th>Heute</th></tr></thead><tbody>
+  <div class="tbl-wrap"><table><thead><tr><th>Ursprünglich (Tag)</th><th>Status</th><th>Heute</th></tr></thead><tbody>
     <tr><td>Challenge-Pitch inkl. Zielsetzung und ROI-Schätzung (1)</td><td><span class="tag ok">übernommen</span></td><td>Vorbereitet im Pre-Reading, Abgabe am Ende von Tag 1, Zulassungsbedingung</td></tr>
     <tr><td>Konzept KI-Integration im Alltag, Roadmap, Messgrössen (2)</td><td><span class="tag ok">übernommen</span></td><td>Business Case Tag 4, Change-Roadmap Tag 12, Kapitel 7</td></tr>
     <tr><td>Peer Reviews aller Pitches (3)</td><td><span class="tag ok">übernommen</span></td><td>Tag 2, Zulassungsbedingung, Teil der Zertifikatsarbeit</td></tr>
@@ -263,8 +310,8 @@ tr:hover td{background:#FAFBFD}
     <tr><td>Budget- und KPI-Dashboard-Skizze (15)</td><td><span class="tag ok">übernommen</span></td><td>Dashboard Tag 15, Kapitel 5; Budget als Teil des Business Case</td></tr>
     <tr><td>Projektpräsentation mit ROI und Peer-Review (16)</td><td><span class="tag ok">übernommen</span></td><td>Tag 16, 30 % der Note, Peer-Reviews als Feedback</td></tr>
     <tr><td>Abgabefrist «+5 Tage» pro Leistungsnachweis</td><td><span class="tag ok">übernommen</span></td><td>FERC-Reflexion 5 Arbeitstage nach Tag 3</td></tr>
-    <tr><td>Zertifikatsfeier (17), Alumni-Club mit Masterminds, Station-Studio-Zugang, Media-Partnership (HWZ Magazin, swissAI)</td><td><span class="tag warn">offen</span></td><td>Nicht im aktuellen Stundenplan und nicht in den Studiendaten. Siehe offene Punkte</td></tr>
-  </tbody></table>
+    <tr><td>Zertifikatsfeier (17), Alumni-Club mit Masterminds, Station-Studio-Zugang, Media-Partnership (HWZ Magazin, swissAI)</td><td><span class="tag warn">offen</span></td><td>Nicht im aktuellen Stundenplan und nicht in den Studiendaten</td></tr>
+  </tbody></table></div>
 </section>
 
 <section class="view" id="v-rahmen" data-title="Rahmenmodelle">
@@ -278,27 +325,30 @@ tr:hover td{background:#FAFBFD}
   <p class="lead">Die HWZ-Vorlagen für Curriculum und Präsentation. Für jeden Kurstag liegt zusätzlich ein vorbefülltes Curriculum bereit, das die Angaben aus diesem Cockpit bereits enthält. Bitte ergänzen, was fehlt, und das fertige Curriculum an die Studienleitung zurückgeben.</p>
   <div class="card field" style="margin-bottom:16px"><h4>Abgabe auf myHWZ: zwei Aufgaben pro Kurstag</h4>
     <p style="font-size:14px;margin:0 0 8px">Beide Dokumente werden auf <a href="https://myhwz.fh-hwz.ch/" target="_blank" rel="noopener">myhwz.fh-hwz.ch</a> im Modul des jeweiligen Kurstags abgelegt, damit die Teilnehmenden sie vor dem Unterricht sehen.</p>
-    <ol style="margin:0;padding-left:20px;font-size:14px"><li><b>Präsentation</b> in der HWZ-Vorlage (.potx), als PDF und als PPTX, spätestens 5 Arbeitstage vor dem Kurstag.</li><li><b>Curriculum</b> in der HWZ-Vorlage (.docx), ausgefüllt und geprüft, spätestens 10 Arbeitstage vor dem Kurstag, damit die Dozierenden der Schnittthemen untereinander abgleichen können.</li></ol>
+    <ol style="margin:0;padding-left:20px;font-size:14px"><li><b>Präsentation</b> in der HWZ-Vorlage (.potx), als PDF und als PPTX, spätestens 1 Woche vor dem Kurstag.</li><li><b>Curriculum</b> in der HWZ-Vorlage (.docx), ausgefüllt und geprüft, spätestens 2 Wochen vor dem Kurstag, damit die Dozierenden der Schnittthemen untereinander abgleichen können.</li></ol>
+    <p style="font-size:14px;margin:8px 0 0">Die konkreten Daten pro Kurstag stehen auf der jeweiligen Tagesseite und auf der persönlichen Startseite (Link der Studienleitung, z.&nbsp;B. <span class="mono">#borter</span>).</p>
     <a class="tag" style="text-decoration:none;font-size:13px;padding:6px 12px;margin-top:10px;display:inline-block" href="https://myhwz.fh-hwz.ch/" target="_blank" rel="noopener">myHWZ öffnen</a>
   </div>
   <div class="grid g2">
     <div class="card"><h4>HWZ Curriculum-Vorlage (leer)</h4><p style="font-size:14px">Word-Vorlage mit den HWZ-Feldern: Modulinfo, Leitidee, Lernziele, Quellenverweise, Präsenzlektionen. Unterrichtszeiten 08.15 bis 16.45 Uhr, Raum siehe Infoscreen.</p><a class="tag" style="text-decoration:none;font-size:13px;padding:6px 12px" href="downloads/HWZ_Curriculum_Vorlage.docx" download>Curriculum-Vorlage (.docx)</a></div>
-    <div class="card"><h4>HWZ Präsentationsvorlage extern (DE)</h4><p style="font-size:14px">PowerPoint-Vorlage der HWZ für Unterrichtsfolien. Bitte für alle Kurstage verwenden, damit die Unterlagen einheitlich sind. Die Vorlage ist 3,4 MB gross.</p><a class="tag" style="text-decoration:none;font-size:13px;padding:6px 12px" href="downloads/HWZ_Praesentationsvorlage_extern_DE.potx" download>Präsentationsvorlage (.potx)</a></div>
+    <div class="card"><h4>HWZ Präsentationsvorlage extern (DE)</h4><p style="font-size:14px">Vorlage für die Präsentation deines Unterrichtstags. Inhalt und Gestaltung sind frei. Bitte für alle Kurstage die HWZ-Vorlage verwenden, damit die Unterlagen einheitlich sind. Die Vorlage ist 3,4 MB gross.</p><a class="tag" style="text-decoration:none;font-size:13px;padding:6px 12px" href="downloads/HWZ_Praesentationsvorlage_extern_DE.potx" download>Präsentationsvorlage (.potx)</a></div>
+    <div class="card"><h4>Unterlagen mit Claude erstellen</h4><p style="font-size:14px">Der Skill «cas-ai-unterricht» erstellt komplette Unterrichtsunterlagen für einen Kurstag: Tagesdramaturgie, Übungen, fertige PPTX in der HWZ-Vorlage und FERC-Reflexion. Skill in Claude Code oder claude.ai aktivieren und mit «Unterlagen für Tag X» starten.</p><a class="tag" style="text-decoration:none;font-size:13px;padding:6px 12px" href="https://github.com/chrisbeyeler/cas-ai-advanced-in-marketing/tree/main/skills/cas-ai-unterricht" target="_blank" rel="noopener">Skill cas-ai-unterricht</a></div>
   </div>
   <h3>Pre-Reading für Teilnehmende</h3>
   <p style="font-size:14px">Liegt im Repo unter <a href="https://github.com/chrisbeyeler/cas-ai-advanced-in-marketing/tree/main/pre-reading" target="_blank" rel="noopener">pre-reading/</a>: Prompt-Grundlagen, Vorbereitungs-Checkliste, laufende Quellen, Lernziele nach Bloom. Neu dazu: die Vorbereitung des Challenge-Pitchs (Zielsetzung, ROI-Schätzung; Abgabe am Ende von Tag 1) und das Bewertungsraster der Zertifikatsarbeit. Dozierende sollten das Paket kennen, weil es festlegt, was am Tag 1 vorausgesetzt wird.</p>
   <h3>Vorbefüllte Curricula pro Kurstag</h3>
-  <table><thead><tr><th>Tag</th><th>Datum</th><th>Modul</th><th>Dozent:in</th><th>Datei</th></tr></thead><tbody id="cur-list"></tbody></table>
+  <div class="tbl-wrap"><table><thead><tr><th>Tag</th><th>Datum</th><th>Modul</th><th>Dozent:in</th><th>Datei</th></tr></thead><tbody id="cur-list"></tbody></table></div>
   <div class="note">Die Studiengruppen-Bezeichnung (MCA-AAIM26-1) ist ein Platzhalter und wird durch die HWZ bestätigt. Die Curricula sind aus den Cockpit-Daten generiert; Änderungen an Lernzielen oder Beschreibungen bitte im Word-Dokument vornehmen und der Studienleitung melden, damit das Cockpit nachgeführt wird.</div>
 </section>
 <section class="view" id="v-tools" data-title="Tools">
   <h2>Tool-Übersicht: was Dozierende und Teilnehmende brauchen</h2>
   <p class="lead">Aus allen 16 Kurstagen zusammengetragen. «Setup vor Tag 1» heisst: Zugang muss am ersten Kurstag stehen, weil Chris Beyeler die Tool-Inbetriebnahme dort macht. Alles andere richten die Dozierenden am eigenen Tag ein. Regel: Abos zahlen die Studierenden. Die dozierende Person klärt vor ihrem Tag, ob ein Trial reicht, und gibt die Toolwahl zwei Wochen vorher bekannt. Kostenangaben sind Richtwerte.</p>
-  <table><thead><tr><th>Tool</th><th>Zweck</th><th>Tage</th><th>Teilnehmende</th><th>Dozierende</th><th>Kosten / Hinweis</th></tr></thead><tbody id="tool-list"></tbody></table>
+  <div class="tbl-wrap"><table><thead><tr><th>Tool</th><th>Zweck</th><th>Tage</th><th>Teilnehmende</th><th>Dozierende</th><th>Kosten / Hinweis</th></tr></thead><tbody id="tool-list"></tbody></table></div>
   <h3>Pro Kurstag</h3>
-  <table><thead><tr><th>Tag</th><th>Modul</th><th>Teilnehmende bringen mit</th><th>Dozent:in stellt bereit</th></tr></thead><tbody id="tool-days"></tbody></table>
+  <div class="tbl-wrap"><table><thead><tr><th>Tag</th><th>Modul</th><th>Teilnehmende bringen mit</th><th>Dozent:in stellt bereit</th></tr></thead><tbody id="tool-days"></tbody></table></div>
   <div class="note">Offen aus dem ursprünglichen Konzept: «1 Jahr Zugang zu Station Studio inkl. eigens entwickelter GPTs» war als Toolbox vorgesehen. Ob das noch gilt und in welchem Umfang, ist nicht geklärt.</div>
 </section>
+<footer class="site">Fragen zur Organisation: Lara Mengarelli über <a href="https://myhwz.fh-hwz.ch/" target="_blank" rel="noopener">myHWZ</a> · Inhaltliches: Chris Beyeler, Studienleitung · Coaching-Termine: <a href="https://chris.langes-meeting.beyonder.ch" target="_blank" rel="noopener">chris.langes-meeting.beyonder.ch</a></footer>
 </main>
 </div>
 
@@ -309,7 +359,7 @@ const LN={P:"Pitch / Präsentation",X:"Umsetzung am eigenen Projekt",R:"Reflexio
 const DISC=["Aff/Inf","Analytics","Branding","Comms","Content","CRM","Dev","Distribution","E-Mail","Preis","Product","SEA","SEO","GEO","Social Ads","Strategie"];
 
 const DAYS=[
-{n:1,date:"Mi 02.09.",kw:36,lek:8,b:"pm",title:"Einführung & Prompt Foundations",who:"Chris Beyeler",ln:"P",
+{n:1,iso:"2026-09-02",whoId:"beyeler",date:"Mi 02.09.",kw:36,lek:8,b:"pm",title:"Einführung & Prompt Foundations",who:"Chris Beyeler",ln:"P",
  bloom:[[1, "Verstehen"], [2, "Anwenden"]],
  faden:"Challenge-Pitch mit ROI-Schätzung fertigstellen, Abgabe am Abend. Vorlagen für Reflexion und Transfer, Coaching-Buchung.",
  leitidee:"Ein Sprachmodell ist ein Gegenüber, das gebrieft werden will. Wer CORE+ beherrscht und den FERC-Rhythmus versteht, prompted nicht mehr aus dem Bauch, sondern führt. Der Tag legt den gemeinsamen Boden und die Challenge, an der alle bis Dezember arbeiten.",
@@ -319,8 +369,8 @@ const DAYS=[
  transfer:"Briefing-Kompetenz. Wer eine Agentur oder Freelancer sauber briefen kann, kann auch ein Sprachmodell briefen. CORE+ ist ein Kreativ-Briefing in fünf Feldern: Rolle, Ziel, Regeln, Beispiel, Dialog.",
  ferc:["Challenge in einem Satz","3 Prompt-Varianten mit CORE+","Varianten vergleichen, beste wählen","Challenge-Satz für Tag 2 festhalten"],
  tasks:["Pre-Reading-Paket inkl. Vorbereitung des Challenge-Pitchs vor Start (Repo pre-reading/)", "Materialpool bereitstellen: Beispiel-Styleguide, Beispieldatensatz, KPI-Vorlage, Pitch-Raster, Peer-Review-Bogen, FERC-Reflexionsvorlage, Transfer-Vorlage", "CORE+ (60 Min.) als Basis für alle Folgetage; FERC nur als Methode für die Reflexion nach Tag 3 vorstellen (20 Min.)", "Arbeitszeit für den Challenge-Pitch einplanen (60 bis 90 Min.), Abgabe auf myHWZ am Abend", "Coaching-Slot für den 26.11. buchen lassen: chris.langes-meeting.beyonder.ch (alle am ersten Tag)"],
- links:["core","ferc","swissai-strategie"]},
-{n:2,date:"Do 03.09.",kw:36,lek:8,b:"pm",title:"Pitch Review & KPI/Monitoring Basics",who:"Chris Beyeler",ln:"–",
+ links:["core","ferc","swissai-strategie","use-cases"]},
+{n:2,iso:"2026-09-03",whoId:"beyeler",date:"Do 03.09.",kw:36,lek:8,b:"pm",title:"Pitch Review & KPI/Monitoring Basics",who:"Chris Beyeler",ln:"–",
  bloom:[[6, "Analysieren"], [4, "Evaluieren"]],
  faden:"Pitch und Peer-Reviews (Zulassungsbedingung). Leit-KPI und Baseline für Kapitel 2 und 5.",
  leitidee:"Ein KI-System ohne Messlogik bleibt ein Gefühl. Der Tag verankert Peer-Feedback als Methode und legt für jede Challenge Leit-KPI, Baseline und Monitoring-Loop fest, auf die Tag 15 wieder aufsetzt.",
@@ -330,8 +380,8 @@ const DAYS=[
  transfer:"Kampagnenziele und Erfolgsmessung. Was für eine Kampagne der Media-Plan mit Ziel-KPI ist, ist hier die Messlogik für ein KI-System: Baseline, Zielwert, Messpunkt, Verantwortung.",
  ferc:["Erfolgsfrage: Woran merkt das Unternehmen den Nutzen?","3 KPI-Kandidaten","Scheinmetriken streichen (Vorgriff auf Tag 15)","1 Leit-KPI und 2 Stütz-KPI festlegen"],
  tasks:["Peer-Reviews aller Pitches mit dem Bogen aus dem Materialpool (Teil der Zertifikatsarbeit)", "KPI-Vorlage ausgeben; sie liegt im Materialpool, jeder Tag kann sie unabhängig nutzen", "Challenge-Liste an alle Dozierenden verteilen (bis 05.09.), zur Kenntnis, nicht als Lieferauftrag"],
- links:["ferc","hbr"]},
-{n:3,date:"Mi 09.09.",kw:37,lek:8,b:"pm",title:"Advanced Prompt-Engineering",who:"Gustavo Salami",ln:"X",
+ links:["ferc","hbr","use-cases"]},
+{n:3,iso:"2026-09-09",whoId:"salami",date:"Mi 09.09.",kw:37,lek:8,b:"pm",title:"Advanced Prompt-Engineering",who:"Gustavo Salami",ln:"X",
  bloom:[[2, "Anwenden"], [3, "Erschaffen"], [4, "Evaluieren"]],
  faden:"Master-Prompt und Chain (Kapitel 3, Anhang). Auftrag FERC-Reflexion, Abgabe 16.09.",
  leitidee:"Prompting lässt sich viel weiter treiben als ein Chat-Fenster. Strukturierte JSON- und XML-Prompts, Master-Prompts und Chains machen aus Einzelanfragen reproduzierbare Produktionsketten für Kampagnen.",
@@ -342,7 +392,7 @@ const DAYS=[
  ferc:["Kampagnenziel aus Challenge ableiten","5 Output-Varianten via Chain","strukturierter Vergleich (Bewertungsraster)","Master-Prompt in Prompt-Library ablegen"],
  tasks:["CORE+ als bekannt voraussetzen (Pre-Reading und Tag 1); bei Verschiebung eigene 15-Minuten-Auffrischung mitbringen", "Deep-Research-Beispiel frei wählen; kein anderer Tag hängt davon ab", "Prompt-Library-Format vorgeben (Vorlage im Materialpool)", "Hands-on-Artefakt: 1 Master-Prompt + 1 Chain pro Person", "FERC-Reflexion (Vorher/Nachher-Wissensvergleich) am Ende des Tages ausgeben, Abgabe +5 Arbeitstage"],
  links:["core","ferc","swissai-modelle"]},
-{n:4,date:"Mi 16.09.",kw:38,lek:8,b:"sl",title:"Strategie & Integration",who:"Monica Monsch",ln:"R",
+{n:4,iso:"2026-09-16",whoId:"monsch",date:"Mi 16.09.",kw:38,lek:8,b:"sl",title:"Strategie & Integration",who:"Monica Monsch",ln:"R",
  bloom:[[5, "Erschaffen"], [6, "Analysieren"]],
  faden:"Business Case und Compliance-Checkliste (Kapitel 2 und 6).",
  leitidee:"Technologie scheitert selten an der Technik, meist an Business Case, Compliance und Verankerung. Der Tag übersetzt die Challenge in eine Sprache, die die Geschäftsleitung entscheiden kann, und richtet die Prompt-Library als Governance-Objekt ein.",
@@ -352,8 +402,8 @@ const DAYS=[
  transfer:"Marketingstrategie und Governance. Business Case, Stakeholder-Landkarte und Freigabeprozesse gibt es für jede grössere Kampagne. Hier werden sie auf ein KI-System angewandt, das dauerhaft läuft.",
  ferc:["Wer entscheidet über das Projekt?","Business-Case-Varianten mit swissAI-Canvas","Risiken und Abhängigkeiten prüfen","1-seitiger Business Case für die Dokumentation"],
  tasks:["swissAI-Werkstatt-Paket (Use-Case-Canvas, Bewertungsraster, Governance-Check) als Arbeitsmaterial nutzen", "Prompt-Library als Governance-Objekt behandeln (Beispiel-Library im Materialpool, falls Tag 3 noch nicht stattfand)", "Compliance-Checkliste mit den acht swissAI-Prüffragen; andere Tage ergänzen sie, brauchen sie aber nicht", "Reflexionsartefakt: Business Case 1 Seite"],
- links:["swissai-strategie","swissai-chats","hbr"]},
-{n:5,date:"Do 24.09.",kw:39,lek:8,b:"ct",title:"Webdesign & Entwicklung",who:"Raphael Pflugi",ln:"R",
+ links:["swissai-strategie","swissai-chats","hbr","use-cases"]},
+{n:5,iso:"2026-09-24",whoId:"pflugi",date:"Do 24.09.",kw:39,lek:8,b:"ct",title:"Webdesign & Entwicklung",who:"Raphael Pflugi",ln:"R",
  bloom:[[3, "Anwenden"], [6, "Erschaffen"]],
  faden:"Mini-App als Oberfläche der Challenge, Basis für den Hackathon.",
  leitidee:"Die Web-Agentur wird zur Entwicklungsumgebung. Mit Low-Code-Prototyping bringen Marketingprofis ihre Idee selbst zur lauffähigen Mini-App und lernen, Aufwand und Machbarkeit einzuschätzen.",
@@ -364,7 +414,7 @@ const DAYS=[
  ferc:["Welche Oberfläche braucht die Challenge?","2 App-Skizzen via Prompt","Usability-Check mit Peer","deployte Mini-App als Hackathon-Basis"],
  tasks:["Eigenes Briefing-Beispiel für Lovable mitbringen; Deep-Research-Output aus Tag 3 ist optional", "Mini-App so anlegen, dass sie am Hackathon weitergebaut werden kann; falls Reihenfolge wechselt, Hackathon-Team baut auf Papier-Skizze", "Hinweis auf Datenschutz bei Lovable-Deployments"],
  links:["ferc"]},
-{n:6,date:"Fr 25.09.",kw:39,lek:8,b:"px",title:"Marketing Fundamentals & Hackathon",who:"Oliver Bertschinger",ln:"P",
+{n:6,iso:"2026-09-25",whoId:"bertschinger",date:"Fr 25.09.",kw:39,lek:8,b:"px",title:"Marketing Fundamentals & Hackathon",who:"Oliver Bertschinger",ln:"P",
  bloom:[[6, "Erschaffen"], [2, "Anwenden"]],
  faden:"Prototyp v0.1 und Hackathon-Pitch. Startpunkt des Leistungsnachweises, letzte Möglichkeit für Challenge-Wechsel.",
  leitidee:"Vormittags das gemeinsame Marketingvokabular, nachmittags der Sprint: Die Challenge wird mit Prompting und Low-Code in einem halben Tag zum Prototyp geführt und gepitcht. Der Tag markiert den Startpunkt des Leistungsnachweises.",
@@ -375,7 +425,7 @@ const DAYS=[
  ferc:["Positionierung und Funnel-Stufe der Challenge","Prototyp-Varianten im Team","Scope schneiden, Pitch proben","Prototyp v0.1 als Basis für den Leistungsnachweis"],
  tasks:["Sprint auf Prompting und Low-Code auslegen; Teams ohne Mini-App starten mit Papier-Prototyp", "Chris Beyeler ist Auftraggeber und Jury, nicht Co-Dozent", "Pitch-Raster aus dem Materialpool verwenden (identisch mit Tag 16)"],
  links:["ferc","hbr"]},
-{n:7,date:"Mi 30.09.",kw:40,lek:8,b:"ct",title:"Advanced Video",who:"Michael Kyburz",ln:"R",
+{n:7,iso:"2026-09-30",whoId:"kyburz",date:"Mi 30.09.",kw:40,lek:8,b:"ct",title:"Advanced Video",who:"Michael Kyburz",ln:"R",
  bloom:[[3, "Anwenden"], [4, "Evaluieren"]],
  faden:"Video-Asset für die Challenge (Kapitel 4).",
  leitidee:"Bewegtbild in Wochen war gestern. Script-to-Video-Pipelines und Avatare verkürzen die Produktion, verlangen aber dieselbe Disziplin bei Marke, Freigabe und Qualitätsgrenzen.",
@@ -386,7 +436,7 @@ const DAYS=[
  ferc:["Welcher Content-Baustein der Challenge braucht Video?","Storyboard-Varianten generieren","Marken-Check gegen Guidelines","1 Video-Asset für das Projekt"],
  tasks:["Brand-Raster aus dem Materialpool verwenden; Avdili nutzt dasselbe, keine gegenseitige Lieferung", "Tool-Kosten und Kontrollgrad transparent machen; Toolwahl 2 Wochen vorher bekannt geben, Trial bevorzugen", "Fokus Bewegtbild-Avatare; Standbild ist Tag 8"],
  links:["ferc"]},
-{n:8,date:"Mi 07.10.",kw:41,lek:8,b:"ct",title:"Advanced Designing",who:"Hekuran Avdili",ln:"R",
+{n:8,iso:"2026-10-07",whoId:"avdili",date:"Mi 07.10.",kw:41,lek:8,b:"ct",title:"Advanced Designing",who:"Hekuran Avdili",ln:"R",
  bloom:[[3, "Erschaffen"], [4, "Evaluieren"]],
  faden:"Styleguide-Auszug und Visual-Pipeline (Kapitel 4).",
  leitidee:"KI baut die Bühne, die Inszenierung bleibt beim Menschen. Der Tag macht den Styleguide vom PDF zum aktiven Bestandteil der Bildproduktion und schult den Blick für Markenkonformität generierter Visuals.",
@@ -397,7 +447,7 @@ const DAYS=[
  ferc:["Markenkern der Challenge in 3 Sätzen","Visual-Varianten auf Kampagnenniveau","Qualitätsbeurteilung nach Raster","Styleguide-Auszug, der an Tag 9 ins RAG wandert"],
  tasks:["Brand-Raster aus dem Materialpool verwenden", "Styleguide-Auszug entsteht am Tag; der RAG-Tag arbeitet unabhängig mit dem Beispiel-Styleguide aus dem Materialpool", "SDSP-Framework kurz aufgreifen", "Toolwahl 2 Wochen vorher bekannt geben, Trial bevorzugen"],
  links:["core","ferc"]},
-{n:9,date:"Do 08.10.",kw:41,lek:8,b:"aa",title:"Retrieval-Augmented Generation (RAG)",who:"Viktor Janevski",ln:"X",
+{n:9,iso:"2026-10-08",whoId:"janevski",date:"Do 08.10.",kw:41,lek:8,b:"aa",title:"Retrieval-Augmented Generation (RAG)",who:"Viktor Janevski",ln:"X",
  bloom:[[3, "Erschaffen"], [4, "Analysieren"], [5, "Anwenden"]],
  faden:"RAG-Grundgerüst mit Halluzinationstest (Kapitel 3 und 4).",
  leitidee:"Unternehmenswissen liegt in Ordnern und Köpfen. Retrieval-Augmented Generation macht es für jede KI-Ausgabe verfügbar und prüfbar. Der Tag zeigt, wie ein Retrieval-System wirklich funktioniert, inklusive Halluzinationstests.",
@@ -408,7 +458,7 @@ const DAYS=[
  ferc:["Welches Wissen braucht das Projekt zuverlässig?","2 Chunking-Strategien testen","Halluzinationstest mit 10 Fragen","RAG-Grundgerüst als Projektbaustein"],
  tasks:["Chunking kurz selbst einführen (5 Min.), nicht auf Tag 1 verlassen", "Beispiel-Styleguide und Beispieldatensatz aus dem Materialpool verwenden; eigene Daten der Teilnehmenden optional", "Eigene n8n-Umgebung mitbringen; Teilnehmende arbeiten in eigenen Konten", "Datenschutz-Auflagen für eigene Unternehmensdaten benennen", "Modellwahl: swissAI-Übersicht offener Modelle und Schweizer Hosting als Referenz"],
  links:["swissai-modelle","swissai-chats","ferc"]},
-{n:10,date:"Mi 14.10.",kw:42,lek:8,b:"aa",title:"Automatisierung",who:"Raphael Pflugi",ln:"R",
+{n:10,iso:"2026-10-14",whoId:"pflugi",date:"Mi 14.10.",kw:42,lek:8,b:"aa",title:"Automatisierung",who:"Raphael Pflugi",ln:"R",
  bloom:[[6, "Erschaffen"], [3, "Anwenden"]],
  faden:"Deployter Workflow mit Human-in-the-Loop-Punkt (Kapitel 3). Kandidat für den Werkzeug-Transfer.",
  leitidee:"Marketing-Operations sind Prozesse, die sich wiederholen. Mit Make, Zapier oder n8n werden Prompts zu deployten Multi-Step-Workflows mit klaren Rollen und Freigabepunkten.",
@@ -419,7 +469,7 @@ const DAYS=[
  ferc:["Welcher Prozess der Challenge wiederholt sich?","Workflow-Varianten skizzieren","Fehlerfälle durchspielen","deployter Workflow mit Human-in-the-Loop-Punkt"],
  tasks:["Workflow-Vorlage mit Human-in-the-Loop-Punkt aus dem Materialpool; Prompts und RAG der Vorgänger sind optionale Bausteine", "Guardrails nur anreissen, Tag 11 vertieft; bei Verschiebung tauschen beide 15 Minuten", "Was nach zwei Wochen bricht: Praxisbeispiele für die Dokumentation"],
  links:["ferc"]},
-{n:11,date:"Do 15.10.",kw:42,lek:8,b:"aa",title:"Agentic & MCP",who:"Jonas Hubmann",ln:"X",
+{n:11,iso:"2026-10-15",whoId:"hubmann",date:"Do 15.10.",kw:42,lek:8,b:"aa",title:"Agentic & MCP",who:"Jonas Hubmann",ln:"X",
  bloom:[[6, "Erschaffen"], [4, "Evaluieren"]],
  faden:"Agent-Baustein mit CRM-Trigger und Guardrails (Kapitel 3). Kandidat für den Werkzeug-Transfer.",
  leitidee:"Der Sprung vom Workflow zum Agenten: Agentische Pipelines planen und handeln, MCP verbindet sie mit CRM und Betriebssystemen. Guardrails, Human-in-the-Loop und Evaluation setzen die Grenzen.",
@@ -430,7 +480,7 @@ const DAYS=[
  ferc:["Welche Entscheidung darf der Agent treffen?","Pipeline-Varianten mit und ohne Freigabe","Edge Cases und Kosten prüfen","Agent-Baustein für das Projekt, Nutzen dokumentiert"],
  tasks:["MCP ist Teil des Tages. Titel «Agentic & MCP» ohne Zusatz", "Eigener Beispiel-Workflow als Startpunkt; Tag 10 ist keine Voraussetzung", "Evaluationsrahmen als Ein-Seiten-Vorlage in den Materialpool geben", "Abgrenzung zum CAS AI in Marketing HWZ (gleicher Dozent, anderes Niveau) explizit machen"],
  links:["ferc","swissai-modelle"]},
-{n:12,date:"Mi 21.10.",kw:43,lek:8,b:"sl",title:"Zukunft der Organisation & Leadership",who:"Monica Monsch",ln:"R",
+{n:12,iso:"2026-10-21",whoId:"monsch",date:"Mi 21.10.",kw:43,lek:8,b:"sl",title:"Zukunft der Organisation & Leadership",who:"Monica Monsch",ln:"R",
  bloom:[[6, "Evaluieren"], [1, "Verstehen"]],
  faden:"Change-Roadmap (Kapitel 7).",
  leitidee:"Ein KI-System, das niemand nutzt, hat keinen ROI. Der Tag behandelt Arbeitsmodelle, Führungsrollen, Widerstände und Risikokommunikation, damit das Projekt nach dem CAS im Unternehmen getragen wird.",
@@ -440,8 +490,8 @@ const DAYS=[
  transfer:"Interne Kommunikation und Change. Ein KI-System, das niemand nutzt, hat keinen ROI. Die Roadmap beantwortet, wie das Team mitgenommen wird und wer nach dem CAS die Verantwortung trägt.",
  ferc:["Wer im Unternehmen muss das System tragen?","Roadmap-Varianten (schnell/breit/tief)","Widerstände und psychologische Sicherheit prüfen","Change-Roadmap als Kapitel der Dokumentation"],
  tasks:["Fünf Beschleuniger aus «Transformation beschleunigen» auf die Projekte anwenden", "Deskilling-Risiko (FERC) als Führungsthema aufnehmen", "Risikokommunikation gegen Widerstand behandeln", "Business Case aus Tag 4 ist Input, falls vorhanden; sonst Kurzfassung am Tag"],
- links:["ferc","hbr","swissai-strategie"]},
-{n:13,date:"Mi 28.10.",kw:44,lek:8,b:"ct",title:"Content Optimization",who:"Marco Schlauri",ln:"X",
+ links:["ferc","hbr","swissai-strategie","use-cases"]},
+{n:13,iso:"2026-10-28",whoId:"schlauri",date:"Mi 28.10.",kw:44,lek:8,b:"ct",title:"Content Optimization",who:"Marco Schlauri",ln:"X",
  bloom:[[3, "Anwenden"], [4, "Analysieren"], [5, "Anwenden"]],
  faden:"Optimierter Content mit Sichtbarkeitsmesswert (Kapitel 4 und 5).",
  leitidee:"Sichtbarkeit verlagert sich von Google in KI-Antworten. Generative Engine Optimization, Schema-Daten und Content Safety entscheiden, ob die eigenen Inhalte gefunden, zitiert und geschützt werden.",
@@ -452,7 +502,7 @@ const DAYS=[
  ferc:["Wo soll die Challenge sichtbar sein?","Content-Varianten mit Schema","Sichtbarkeitstest in 3 KI-Systemen","optimierter Content-Baustein + Messwert"],
  tasks:["Benchmark-Daten zur Schweiz einbringen", "Content-Safety-Punkt in die Compliance-Checkliste eintragen (Materialpool)", "Sichtbarkeits-KPI in der KPI-Vorlage definieren", "Eigene Website oder Beispiel der Teilnehmenden als Übungsobjekt"],
  links:["ferc"]},
-{n:14,date:"Fr 06.11.",kw:45,lek:8,b:"px",title:"GenAI Praxisfälle (Marketing & Sales)",who:"Michael Kyburz",ln:"T",
+{n:14,iso:"2026-11-06",whoId:"kyburz",date:"Fr 06.11.",kw:45,lek:8,b:"px",title:"GenAI Praxisfälle (Marketing & Sales)",who:"Michael Kyburz",ln:"T",
  bloom:[[6, "Analysieren"], [4, "Evaluieren"]],
  faden:"Fremder Case im Team. Prüft, ob die Methode über das eigene Projekt hinaus trägt. Unbewertet.",
  leitidee:"Der Transfertag: Alle Bausteine werden an fremden Marketing- und Sales-Cases angewandt. Das prüft, ob die Methode trägt oder nur das eigene Projekt gelernt wurde.",
@@ -463,7 +513,7 @@ const DAYS=[
  ferc:["Fremden Case in 30 Minuten verstehen","Lösungsvarianten mit den Bausteinen aus Tag 3 bis 13","Vergleich der Teamlösungen","Transferbericht (Baustein C der Leistungsnachweise)"],
  tasks:["2 bis 3 echte Cases beschaffen (Kunden von BEYONDER, mit Freigabe)", "Dozenteninfo: Das in der Matrix genannte Churn-Modell kann nicht geliefert werden (keine Daten). Lernziel gestrichen, Fokus auf Personalisierung und Content-Generierung", "Kurzpräsentation im Plenum, unbewertet"],
  links:["ferc","hbr"]},
-{n:15,date:"Sa 07.11. + Fr 13.11.",kw:45,lek:8,b:"sl",title:"Performance Monitoring & Dashboards",who:"Natalie Borter",ln:"X",half:true,
+{n:15,iso:"2026-11-07",iso2:"2026-11-13",whoId:"borter",date:"Sa 07.11. + Fr 13.11.",kw:45,lek:8,b:"sl",title:"Performance Monitoring & Dashboards",who:"Natalie Borter",ln:"X",half:true,
  bloom:[[4, "Evaluieren"], [6, "Analysieren"], [5, "Anwenden"]],
  faden:"Dashboard und Insights-Loop (Kapitel 5). Letzter operativer Tag, danach Werkzeug-Transfer bis 20.11.",
  leitidee:"Misst die Kennzahl, was sie zu messen vorgibt? Zwei Halbtage zu Konstruktvalidität, Dashboards, Alerts und Insights-Loops, damit die Wirkung des eigenen KI-Systems belastbar nachgewiesen wird.",
@@ -474,7 +524,7 @@ const DAYS=[
  ferc:["Leit-KPI von Tag 2 wieder aufnehmen","Dashboard-Varianten","Validitätsprüfung der Metriken","Dashboard-Baustein + Insights-Loop für die Dokumentation"],
  tasks:["KPI-Vorlage aus dem Materialpool als Ausgangspunkt; ausgefüllte Vorlagen der Teilnehmenden, falls vorhanden", "Beispieldaten aus dem Materialpool; Evaluationsdaten aus Tag 11 optional", "Datenschutzkonformes Datenhandling nach Schweizer Vorgaben", "Online-Halbtag: Tool und Ablauf mit Lara Mengarelli testen"],
  links:["hbr","ferc"]},
-{n:16,date:"Fr 11.12.",kw:50,lek:8,b:"px",title:"Leistungsnachweis Präsentationen",who:"Chris Beyeler",ln:"P",
+{n:16,iso:"2026-12-11",whoId:"beyeler",date:"Fr 11.12.",kw:50,lek:8,b:"px",title:"Leistungsnachweis Präsentationen",who:"Chris Beyeler",ln:"P",
  bloom:[[6, "Evaluieren"], [4, "Evaluieren"]],
  faden:"Präsentation mit ROI-Betrachtung und Peer-Review, 7 + 5 Minuten. Dokumentation ist am 04.12. abgegeben.",
  leitidee:"Der Pitch ist die Vorlage für die Geschäftsleitung: Nutzen, Kosten, Risiko, nächster Schritt. Jury und Peers geben Feedback, Lessons Learned schliessen den Bogen zu Tag 1.",
@@ -484,7 +534,7 @@ const DAYS=[
  transfer:"Management-Präsentation. Der Pitch ist die Vorlage für die Geschäftsleitung: Nutzen, Kosten, Risiko, nächster Schritt. Genau das, was heute im Marketing oft fehlt, wenn nach KI-Zahlen gefragt wird.",
  ferc:["Kernaussage des Projekts","Pitch-Varianten geprobt am Coaching","Jury-Feedback","Dokumentation abgegeben, Lessons Learned"],
  tasks:["Jury: Studienleitung + 1 Dozent:in + 1 Praxispartner", "Bewertungsraster ist seit dem Pre-Reading bekannt", "Peer-Review-Bogen für die Präsentationen (Teil der Zertifikatsarbeit)", "Abgabetermin Dokumentation: 04.12., 23:59, myHWZ"],
- links:["ferc","hbr"]}
+ links:["ferc","hbr","use-cases"]}
 ];
 const CURFILES={"1": "Curriculum_Tag01_Einf_hrung_Prompt_Foundations.docx", "2": "Curriculum_Tag02_Pitch_Review_KPI_Monitoring_Basics.docx", "3": "Curriculum_Tag03_Advanced_Prompt_Engineering.docx", "4": "Curriculum_Tag04_Strategie_Integration.docx", "5": "Curriculum_Tag05_Webdesign_Entwicklung.docx", "6": "Curriculum_Tag06_Marketing_Fundamentals_Hackathon.docx", "7": "Curriculum_Tag07_Advanced_Video.docx", "8": "Curriculum_Tag08_Advanced_Designing.docx", "9": "Curriculum_Tag09_Retrieval_Augmented_Generation_RAG.docx", "10": "Curriculum_Tag10_Automatisierung.docx", "11": "Curriculum_Tag11_Agentic_MCP.docx", "12": "Curriculum_Tag12_Zukunft_der_Organisation_Leadership.docx", "13": "Curriculum_Tag13_Content_Optimization.docx", "14": "Curriculum_Tag14_GenAI_Praxisf_lle_Marketing_Sales.docx", "15": "Curriculum_Tag15_Performance_Monitoring_Dashboards.docx", "16": "Curriculum_Tag16_Leistungsnachweis_Pr_sentationen.docx"};
 const TOOLS=[
@@ -510,7 +560,7 @@ const TOOLS=[
 const TOOLDAYS={1:["Laptop, Bezahl-Abo ChatGPT oder Claude, myHWZ-Login, Challenge-Idee","Tool-Checkliste, CORE+-Vorlage, Reflexions- und Transfer-Vorlage, Challenge-Formular, Coaching-Link"],2:["KPI-Vorlage ausgefüllt, 5-Minuten-Pitch mit ROI-Schätzung","Peer-Review-Bogen, KPI-Vorlage, Deloitte/McKinsey-Zahlen als Einordnung"],3:["Bezahl-Abo mit Deep Research, Prompt-Library-Konto","JSON/XML-Beispiele, Chain-Vorlage, Library-Format"],4:["swissAI-Paket heruntergeladen, Business-Case-Idee","Use-Case-Canvas, Compliance-Checkliste (8 swissAI-Prüffragen), Governance-Check"],5:["Lovable-Konto, Deep-Research-Output aus Tag 3","Demo-Projekt, Prompting-Muster für Entwicklungsumgebungen"],6:["Mini-App aus Tag 5, Challenge, Laptop","Marketing-Mix-Vorlage, Sprint-Ablauf, Pitch-Raster (identisch mit Tag 16)"],7:["Testkonto Video-Tool, Brand Guidelines des eigenen Unternehmens","Toolwahl 2 Wochen vorher, Storyboard-Vorlage, Brand-Raster (mit Avdili)"],8:["Testkonto Bildgenerator, Styleguide des eigenen Unternehmens (PDF)","Bewertungsraster Visuals, Styleguide-Format für RAG (mit Janevski)"],9:["n8n-Konto, Vector-DB-Konto, Styleguide-Auszug aus Tag 8","n8n-Instanz, Beispieldaten, Halluzinationstest-Vorlage (10 Fragen)"],10:["n8n-Konto, Master-Prompt aus Tag 3, RAG aus Tag 9, Screencast-Tool","Workflow-Vorlage mit Human-in-the-Loop-Punkt, Rollenmatrix"],11:["n8n-Konto, MCP-Client installiert, CRM-Testkonto","Setup-Anleitung eine Woche vorher, Beispiel-Server, Evaluationsrahmen (für Tag 15)"],12:["Business Case aus Tag 4, Stakeholder-Liste","Change-Roadmap-Vorlage, fünf Beschleuniger, Deskilling-Input (FERC)"],13:["Eigene Website oder Content-Beispiel, Schema-Validator im Browser","GEO-Benchmark, Sichtbarkeits-KPI-Definition (für Tag 15)"],14:["Laptop, alle Bausteine aus Tag 3 bis 13","2 bis 3 echte Cases mit Freigabe, Kurzpräsentations-Format"],15:["Dashboard-Konto, KPI-Vorlage aus Tag 2, Evaluationsdaten aus Tag 11","Validitäts-Checkliste, Alert-Vorlage, Online-Setup für 13.11."],16:["Dokumentation abgegeben (04.12.), Pitch mit max. 10 Slides, Demo oder Screencast","Jury, Bewertungsraster, Zeitplan (10 × 12 Minuten)"]};
 const KF={1:"KI-Grundverständnis",2:"Prompting-Handwerk",3:"Context Engineering und Skills",4:"Kritisches Urteil und Modellwahl",5:"Datenschutz, Recht, Richtlinien",6:"Strategische Integration"};
 const BL_ORDER=["Erinnern","Verstehen","Anwenden","Analysieren","Evaluieren","Erschaffen"];
-const COACH={date:"Do 26.11.",kw:48,title:"Coaching-Session (freiwillig)",who:"Chris Beyeler",note:"20 Min. pro Person, buchbar unter chris.langes-meeting.beyonder.ch. Buchung erfolgt am ersten Kurstag."};
+const COACH={iso:"2026-11-26",date:"Do 26.11.",kw:48,title:"Coaching-Session (freiwillig)",who:"Chris Beyeler",note:"20 Min. pro Person, buchbar unter chris.langes-meeting.beyonder.ch. Buchung erfolgt am ersten Kurstag."};
 
 const PERSONS=[
 {id:"beyeler",name:"Chris Beyeler",role:"Studiengangsleitung · Prompt Foundations · KPI/Monitoring Basics · Coaching · Leistungsnachweis",org:"BEYONDER AG, Gebenstorf · Präsident swissAI (vormals KImpact)",days:[1,2,16],
@@ -619,7 +669,7 @@ const LNCAL=[
 ["11.12.","16","Präsentation mit ROI-Betrachtung, Peer-Review","A","Beyeler + Jury"]
 ];
 
-const FW_SHORT={"stufen": ["Fünf Stufen von Neugier über Use Case und Werkzeug bis Infrastruktur und Unsichtbar. Reife heisst: Die Organisation redet nicht mehr über KI.", "Der CAS führt von Stufe 2 nach 3. Erklärt, warum ab Tag 2 nur Marketing-KPIs zählen, keine KI-KPIs."], "ferc": ["Frame, Explore, Refine, Commit: Ziel setzen, Alternativen erzeugen, vergleichen, verantwortet entscheiden.", "Methode für die FERC-Reflexion nach Tag 3 (Vorher/Nachher) und Denkrahmen für Human Authorship an Tag 12."], "core": ["Character, Objective, Rules, Example, + Talk: das Briefing-Schema für Prompts.", "Gemeinsames Vokabular aus dem Pre-Reading; Tag 3 baut Chains darauf."], "hbr": ["HBR-Grafik zu KI-Adoption USA/Japan: breit und flach vs. langsam und tief. Stufen nicht belegbar (Paywall).", "Nur als Einordnung, nicht zitieren. Deloitte und MIT CISR sind die belegbaren Alternativen."], "double-diamond": ["Discover, Define, Develop, Deliver: zweimal öffnen und schliessen.", "Brücke zu FERC an Tag 1 und Sprint-Struktur am Hackathon."], "deloitte": ["Vier Stufen von Basisautomatisierung bis Organisationsneugestaltung, mit ROI-Daten aus 550 Unternehmen.", "Externer Beleg für Tag 2, 12 und 16. Als Stufenmodell zu kurz, darum nicht Leitmodell."], "hitl": ["Drei Fragen an jedes System: Wo entscheidet der Mensch, was darf es nie, woran merken wir Fehler.", "Pflichtteil in Kapitel 3 der Dokumentation. Vorlage im Materialpool."], "dsg": ["Schweizer DSG plus EU AI Act: Datenbearbeitung, Profiling, Kennzeichnung generierter Inhalte.", "Kapitel 6 der Dokumentation. Die acht swissAI-Prüffragen sind die Checkliste."], "swissai-strategie": ["Werkstatt-Paket für Geschäftsleitungen: Canvas, Bewertungsraster, Massnahmenplan, elf Prompts.", "Arbeitsmaterial für Business Case (Tag 4) und Roadmap (Tag 12)."], "swissai-modelle": ["Offene Modelle nach Aufgabe, Speicher, Deutschqualität und Lizenz; drei Betriebswege.", "Modell- und Hosting-Entscheid an Tag 3, 9 und 11."], "swissai-chats": ["Sechzehn Schweizer KI-Chats mit acht Prüffragen.", "Compliance-Checkliste für Tag 4 und Auswahlhilfe für Tag 9."], "swissai-initiative": ["Apertus, das offene Schweizer Sprachmodell von ETH, EPFL und CSCS.", "Souveränitätsfrage an Tag 4 und 9; Partnerbezug swissAI."]};
+const FW_SHORT={"stufen": ["Fünf Stufen von Neugier über Use Case und Werkzeug bis Infrastruktur und Unsichtbar. Reife heisst: Die Organisation redet nicht mehr über KI.", "Der CAS führt von Stufe 2 nach 3. Erklärt, warum ab Tag 2 nur Marketing-KPIs zählen, keine KI-KPIs."], "ferc": ["Frame, Explore, Refine, Commit: Ziel setzen, Alternativen erzeugen, vergleichen, verantwortet entscheiden.", "Methode für die FERC-Reflexion nach Tag 3 (Vorher/Nachher) und Denkrahmen für Human Authorship an Tag 12."], "core": ["Character, Objective, Rules, Example, + Talk: das Briefing-Schema für Prompts.", "Gemeinsames Vokabular aus dem Pre-Reading; Tag 3 baut Chains darauf."], "hbr": ["HBR-Grafik zu KI-Adoption USA/Japan: breit und flach vs. langsam und tief. Stufen nicht belegbar (Paywall).", "Nur als Einordnung, nicht zitieren. Deloitte und MIT CISR sind die belegbaren Alternativen."], "double-diamond": ["Discover, Define, Develop, Deliver: zweimal öffnen und schliessen.", "Brücke zu FERC an Tag 1 und Sprint-Struktur am Hackathon."], "deloitte": ["Vier Stufen von Basisautomatisierung bis Organisationsneugestaltung, mit ROI-Daten aus 550 Unternehmen.", "Externer Beleg für Tag 2, 12 und 16. Als Stufenmodell zu kurz, darum nicht Leitmodell."], "hitl": ["Drei Fragen an jedes System: Wo entscheidet der Mensch, was darf es nie, woran merken wir Fehler.", "Pflichtteil in Kapitel 3 der Dokumentation. Vorlage im Materialpool."], "dsg": ["Schweizer DSG plus EU AI Act: Datenbearbeitung, Profiling, Kennzeichnung generierter Inhalte.", "Kapitel 6 der Dokumentation. Die acht swissAI-Prüffragen sind die Checkliste."], "swissai-strategie": ["Werkstatt-Paket für Geschäftsleitungen: Canvas, Bewertungsraster, Massnahmenplan, elf Prompts.", "Arbeitsmaterial für Business Case (Tag 4) und Roadmap (Tag 12)."], "swissai-modelle": ["Offene Modelle nach Aufgabe, Speicher, Deutschqualität und Lizenz; drei Betriebswege.", "Modell- und Hosting-Entscheid an Tag 3, 9 und 11."], "swissai-chats": ["Sechzehn Schweizer KI-Chats mit acht Prüffragen.", "Compliance-Checkliste für Tag 4 und Auswahlhilfe für Tag 9."], "use-cases": ["68 KI-Use-Cases aus 8 Funktionsbereichen mit über 40 Tools, je mit Aufgabe, Anleitung und Bewertung; Zugänge über Quick Win, KI-Kompass, KI-Match und filterbare Übersicht.", "Ideenspeicher für Challenge-Wahl (Tag 1) und Pitches (Tag 2), Use-Case-Portfolio für Business Case und Roadmap (Tag 4 und 12), Beispielfundus für die Abschlusspräsentationen (Tag 16)."], "swissai-initiative": ["Apertus, das offene Schweizer Sprachmodell von ETH, EPFL und CSCS.", "Souveränitätsfrage an Tag 4 und 9; Partnerbezug swissAI."]};
 const FRAMEWORKS=[
 {id:"ferc",t:"FERC: Frame, Explore, Refine, Commit",src:"Center for Hybrid Intelligence, Aarhus University",url:"https://hi-infinity.ai/ferc/",
  what:"Prozessrahmen für die Zusammenarbeit mit generativer KI, der das Deskilling-Risiko adressiert. Statt den perfekten Prompt für einen Wurf zu suchen, wird der Interaktionsprozess gesteuert: Ziel und Kriterien setzen (Frame), Alternativen erzeugen (Explore), vergleichend bewerten (Refine), verantwortet entscheiden (Commit). Unterscheidet Ownership (wem das Ergebnis gehört) von Authorship (wer den Prozess verantwortet).",
@@ -665,12 +715,31 @@ const FRAMEWORKS=[
  what:"Sechzehn Anbieter im neutralen Vergleich mit acht Prüffragen (Modellstandort, Herkunft, Trainingsausschluss, Aufbewahrung, Unterauftragsverarbeiter, DSG vs. DSGVO, Gratis-Lizenz, Haftung). Kernaussage: «Schweizer KI» kann Firma, Hosting oder Modell bedeuten, fast nie alle drei.",
  use:"Die acht Prüffragen sind direkt als Compliance-Checkliste für Tag 4 verwendbar und als Auswahlhilfe für Tag 9 (Daten in RAG).",
  days:[4,9],status:"ok"},
+{id:"use-cases",t:"BEYONDER: 68 KI-Use-Cases",src:"BEYONDER AG, 2026",url:"https://beyondernow.github.io/ki-use-cases-landingpage/",
+ what:"Sammlung von 68 KI-Use-Cases aus 8 Funktionsbereichen mit über 40 Tools, je mit Aufgabe, Tool-Empfehlung, Anleitung und Bewertung. Vier Zugänge: Quick Win (schnell umsetzbare Cases), KI-Kompass (Einstieg nach Funktionsbereich), KI-Match (Empfehlung nach Profil) und eine filterbare Übersicht. Die komplette Liste steht als Excel-Download bereit.",
+ use:"Ideenspeicher für die Challenge-Wahl (Tag 1) und die Pitches (Tag 2, Beyeler). Use-Case-Portfolio für Business Case und Roadmap (Tag 4 und 12, Monsch). Beispielfundus für die Abschlusspräsentationen (Tag 16).",
+ days:[1,2,4,12,16],status:"ok"},
 {id:"swissai-initiative",t:"Swiss AI Initiative und Apertus",src:"swissAI und Swiss AI Initiative",url:"https://www.swissai.ch/swiss-ai-initiative",
  what:"Offenes Schweizer Sprachmodell (ETH, EPFL, CSCS) mit offenen Gewichten, Daten und Code. Wertschöpfungskette Compute, Forschung, Modell, Transfer, Wirkung. swissAI unterstützt als unabhängiger Verband.",
  use:"Kontext für die Souveränitätsfrage an Tag 4 und 9. Apertus als Beispiel für ein Modell, das sich für sensible Marketingdaten in der Schweiz hosten lässt. Partnerbezug: swissAI ist Partner des CAS.",
  days:[4,9],status:"ok"}
 ];
 
+const MATERIALS=[
+{id:"styleguide",name:"Beispiel-Styleguide",zweck:"Übungs- und RAG-Material, wenn kein eigener Styleguide vorliegt",tage:[8,9],owner:"Beyeler",status:"arbeit",seit:""},
+{id:"datensatz",name:"Beispieldatensatz",zweck:"Daten für RAG-Übungen und Dashboard-Beispiele",tage:[9,15],owner:"Beyeler",status:"arbeit",seit:""},
+{id:"kpi-vorlage",name:"KPI-Vorlage",zweck:"Leit-KPI, Stütz-KPIs und Baseline pro Challenge festhalten",tage:[2,13,15],owner:"Beyeler",status:"arbeit",seit:""},
+{id:"pitch-raster",name:"Pitch-Raster",zweck:"Einheitliche Kriterien für Pitches an Tag 1, 6 und 16",tage:[1,6,16],owner:"Beyeler",status:"arbeit",seit:""},
+{id:"peer-review",name:"Peer-Review-Bogen",zweck:"Bogen für die Peer-Reviews der Pitches und Präsentationen",tage:[2,16],owner:"Beyeler",status:"arbeit",seit:""},
+{id:"brand-raster",name:"Brand-Raster",zweck:"Markenkonformität generierter Video- und Bild-Assets prüfen",tage:[7,8,10],owner:"Beyeler",status:"arbeit",seit:""},
+{id:"compliance",name:"Compliance-Checkliste",zweck:"Die acht swissAI-Prüffragen; Fachtage ergänzen je eine Zeile",tage:[4,9,13],owner:"Beyeler",status:"arbeit",seit:""},
+{id:"workflow-vorlage",name:"Workflow-Vorlage",zweck:"Multi-Step-Workflow mit Human-in-the-Loop-Punkt und Rollenmatrix",tage:[10],owner:"Beyeler",status:"arbeit",seit:""},
+{id:"ferc-vorlage",name:"FERC-Reflexionsvorlage",zweck:"Vier FERC-Felder plus Feld zur veränderten Arbeitsweise (Baustein B)",tage:[1,3],owner:"Beyeler",status:"arbeit",seit:""},
+{id:"transfer-vorlage",name:"Transfer-Vorlage",zweck:"Ein-Seiten-Vorlage für den Werkzeug-Transfer (Baustein C)",tage:[1,14],owner:"Beyeler",status:"arbeit",seit:""},
+{id:"prompt-library",name:"Prompt-Library-Format",zweck:"Format für Master-Prompts und Chains, wird an Tag 4 verankert",tage:[3,4],owner:"Salami",status:"arbeit",seit:""},
+{id:"evaluationsrahmen",name:"Evaluationsrahmen",zweck:"Ein-Seiten-Vorlage zur Bewertung von Agenten, Input für Tag 15",tage:[11,15],owner:"Hubmann",status:"arbeit",seit:""},
+{id:"hitl-vorlage",name:"Human-in-the-Loop-Vorlage",zweck:"Drei Fragen an jedes System: Freigabepunkt, Guardrail, Alert",tage:[10,11,15],owner:"Pflugi + Hubmann",status:"arbeit",seit:""}
+];
 
 </script>
 <script>
@@ -680,6 +749,15 @@ const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
 const byId=id=>PERSONS.find(p=>p.id===id);
 const dayOf=n=>DAYS.find(d=>d.n===n);
 const bcol={pm:"var(--pm)",sl:"var(--sl)",ct:"var(--ct)",aa:"var(--aa)",px:"var(--px)"};
+
+/* Datums-Helfer (Kalendertage) */
+function parseISO(s){return new Date(s+"T00:00:00")}
+function addDays(iso,n){const d=parseISO(iso);d.setDate(d.getDate()+n);const p=x=>String(x).padStart(2,"0");return d.getFullYear()+"-"+p(d.getMonth()+1)+"-"+p(d.getDate())}
+const WD=["So","Mo","Di","Mi","Do","Fr","Sa"];
+function fmtCH(iso){const d=parseISO(iso);const p=x=>String(x).padStart(2,"0");return WD[d.getDay()]+" "+p(d.getDate())+"."+p(d.getMonth()+1)+"."+d.getFullYear()}
+function deadlines(d){return {curriculum:addDays(d.iso,-14),praesentation:addDays(d.iso,-7)}}
+function dlClass(iso){const t=new Date();t.setHours(0,0,0,0);const diff=Math.round((parseISO(iso)-t)/86400000);return diff<0?"frist-err":diff<=10?"frist-warn":""}
+const SKILL_URL="https://github.com/chrisbeyeler/cas-ai-advanced-in-marketing/tree/main/skills/cas-ai-unterricht";
 
 /* Band */
 (function(){
@@ -708,13 +786,31 @@ function renderDayNav(active){
 function sameDisc(d){
   return DAYS.filter(o=>o.n!==d.n&&o.disc.some(x=>d.disc.includes(x))).map(o=>`<a href="#tage" onclick="openDay(${o.n})">Tag ${o.n}</a>`).join(", ")||"–";
 }
+function showFramework(id){showView("rahmen");const el=document.getElementById("fw-"+id);if(el)el.scrollIntoView({behavior:"smooth"})}
 function openDay(n){
   const d=dayOf(n); showView("tage"); renderDayNav(n);
-  const fx=["Frame","Explore","Refine","Commit"];
+  const dl=deadlines(d);
   $("#day-detail").innerHTML=`
   <div class="day-head" style="background:${bcol[d.b]}">
     <div class="big">${d.n}</div>
-    <div style="flex:1"><h2>${esc(d.title)}</h2><div class="meta">${d.date} · KW ${d.kw} · ${d.lek} Lektionen · ${BLOCKS[d.b]} · ${esc(d.who)} · LN ${d.ln} (${LN[d.ln]})</div></div>
+    <div style="flex:1"><h2>${esc(d.title)}</h2><div class="meta">${d.date} · KW ${d.kw} · ${d.lek} Lektionen · ${BLOCKS[d.b]} · ${esc(d.who)} · LN ${d.ln} (${LN[d.ln]})<br>Curriculum bis ${fmtCH(dl.curriculum)} · Präsentation bis ${fmtCH(dl.praesentation)}</div></div>
+  </div>
+  <div class="card field" style="margin-bottom:18px"><h4>Vorbereitung für ${esc(d.who)}</h4>
+    <p style="margin:0 0 8px"><b>Fristen:</b> Curriculum (.docx) bis <b><span class="${dlClass(dl.curriculum)}">${fmtCH(dl.curriculum)}</span></b> (2 Wochen vorher) · Präsentation (PDF + PPTX) bis <b><span class="${dlClass(dl.praesentation)}">${fmtCH(dl.praesentation)}</span></b> (1 Woche vorher), beides auf myHWZ.</p>
+    <p style="margin:0 0 10px"><b>Artefakt des Tages:</b> ${esc(d.faden)}<br><span class="mono muted">Beitrag zum Leistungsnachweis: ${d.ln} · ${LN[d.ln]}</span></p>
+    <div class="grid g2" style="margin:0 0 10px">
+      <div><h3 style="margin:6px 0 4px">Das stellst du bereit</h3><p style="margin:0;font-size:14px">${esc(TOOLDAYS[n][1])}</p></div>
+      <div><h3 style="margin:6px 0 4px">Das bringen die Teilnehmenden mit</h3><p style="margin:0;font-size:14px">${esc(TOOLDAYS[n][0])}</p></div>
+    </div>
+    <details><summary style="cursor:pointer;color:var(--hwz);font-size:13px">Hinweise für den Tag</summary><ul style="margin:6px 0 0;padding-left:18px">${d.tasks.map(t=>`<li>${esc(t)}</li>`).join("")}</ul></details>
+    <div class="no-print" style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+      <a class="tag" style="text-decoration:none;font-size:13px;padding:6px 12px;background:var(--hwz);color:#fff" href="downloads/curriculum/${CURFILES[d.n]}" download>Curriculum Tag ${d.n} (.docx)</a>
+      <a class="tag" style="text-decoration:none;font-size:13px;padding:6px 12px" href="downloads/HWZ_Praesentationsvorlage_extern_DE.potx" download title="Vorlage für die Präsentation deines Unterrichtstags. Inhalt und Gestaltung sind frei.">Präsentationsvorlage (.potx)</a>
+      <a class="tag" style="text-decoration:none;font-size:13px;padding:6px 12px" href="https://myhwz.fh-hwz.ch/" target="_blank" rel="noopener">myHWZ öffnen</a>
+      <a class="tag" style="text-decoration:none;font-size:13px;padding:6px 12px" href="#material" onclick="showView('material')">Materialpool</a>
+      <button class="tag" style="font-size:13px;padding:6px 12px;cursor:pointer;border:1px solid var(--line)" onclick="window.print()">Tagesblatt drucken</button>
+    </div>
+    <p class="muted" style="font-size:13px;margin:8px 0 0">Präsentationsvorlage: Inhalt und Gestaltung sind frei.</p>
   </div>
   <div class="grid g2">
     <div class="card"><h4>Thema und Beschreibung</h4><p style="margin:0">${esc(d.desc)}</p>
@@ -728,20 +824,20 @@ function openDay(n){
   <div class="ferc" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">${d.bloom.map(b=>`<div><b>Feld ${b[0]} · ${KF[b[0]]}</b><span class="tag ${BL_ORDER.indexOf(b[1])>=3?"ok":""}">${b[1]}</span> <span class="muted" style="font-size:12px">Stufe ${BL_ORDER.indexOf(b[1])+1} von 6</span></div>`).join("")}</div>
   <div class="grid g2" style="margin-top:18px">
     <div class="card"><h4>Hinweise für ${esc(d.who)}: jeder Tag steht für sich</h4><ul style="margin:0;padding-left:18px">${d.tasks.map(t=>`<li>${esc(t)}</li>`).join("")}</ul></div>
-    <div class="card"><h4>Rahmen und Material</h4><ul style="margin:0;padding-left:18px">${d.links.map(l=>{const f=FRAMEWORKS.find(x=>x.id===l);return `<li><a href="#rahmen" onclick="showView('rahmen')">${esc(f.t)}</a></li>`}).join("")}</ul>
+    <div class="card"><h4>Rahmen und Material</h4><ul style="margin:0;padding-left:18px">${d.links.map(l=>{const f=FRAMEWORKS.find(x=>x.id===l);return `<li><a href="#rahmen" onclick="showFramework('${l}')">${esc(f.t)}</a></li>`}).join("")}</ul>
       <p class="mono muted" style="margin:10px 0 0">Beitrag zum Leistungsnachweis: ${d.ln} · ${LN[d.ln]}</p></div>
   </div>
-  <div class="card" style="margin-top:18px" id="cur-block"><h4>Curriculum für die HWZ-Vorlage</h4>
-    <p class="muted" style="font-size:13px;margin:0 0 10px">Human in the Loop: Jedes Feld ist ein Vorschlag aus dem Cockpit. Bitte lesen, prüfen, bei Bedarf anpassen und erst dann als «geprüft» markieren. Kopiert wird nur, was geprüft ist. Das Kopieren übernimmt Fettdruck und Aufzählungen nach Word.</p>
-    <div class="curfields">${curFields(d).map((f,i)=>`<div class="cf"><label class="cf-l"><input type="checkbox" data-i="${i}" onchange="cfToggle(this)"> ${f.label}</label><div class="cf-v">${f.html}</div><button class="cf-c" title="Feld kopieren" onclick="cfCopy(${d.n},${i},this)" aria-label="${f.label} kopieren">${ICON_COPY}</button></div>`).join("")}</div>
-    <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+  <div class="card" style="margin-top:18px" id="cur-block"><details><summary style="cursor:pointer;color:var(--hwz);font-weight:600;font-size:16px">Curriculum-Felder einzeln prüfen (für Korrekturen)</summary>
+    <p class="muted" style="font-size:13px;margin:10px 0 10px">Human in the Loop: Jedes Feld ist ein Vorschlag aus dem Cockpit. Bitte lesen, prüfen, bei Bedarf anpassen und erst dann als «geprüft» markieren. Kopiert wird nur, was geprüft ist. Das Kopieren übernimmt Fettdruck und Aufzählungen nach Word. Häkchen bleiben auf diesem Gerät gespeichert.</p>
+    <div class="curfields">${curFields(d).map((f,i)=>`<div class="cf ${cfState(d.n).includes(i)?"ok":""}"><label class="cf-l"><input type="checkbox" data-i="${i}" ${cfState(d.n).includes(i)?"checked":""} onchange="cfToggle(this,${d.n})"> ${f.label}</label><div class="cf-v">${f.html}</div><button class="cf-c" title="Feld kopieren" onclick="cfCopy(${d.n},${i},this)" aria-label="${f.label} kopieren">${ICON_COPY}</button></div>`).join("")}</div>
+    <div class="no-print" style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
       <button class="tag" style="font-size:13px;padding:6px 12px;cursor:pointer;border:1px solid var(--line)" onclick="cfCopyAll(${d.n},this)">${ICON_COPY} Geprüfte Felder kopieren</button>
       <a class="tag" style="text-decoration:none;font-size:13px;padding:6px 12px" href="downloads/curriculum/${CURFILES[d.n]}" download>Curriculum Tag ${d.n} (.docx)</a>
       <a class="tag" style="text-decoration:none;font-size:13px;padding:6px 12px" href="downloads/HWZ_Curriculum_Vorlage.docx" download>Leere Vorlage (.docx)</a>
       <a class="tag" style="text-decoration:none;font-size:13px;padding:6px 12px" href="https://myhwz.fh-hwz.ch/" target="_blank" rel="noopener">Auf myHWZ ablegen</a>
     </div>
-    <p style="font-size:13px;margin:12px 0 0"><b>Abgabe auf myHWZ:</b> Curriculum bis 10 Arbeitstage, Präsentation (PDF + PPTX in der HWZ-Vorlage) bis 5 Arbeitstage vor dem ${esc(d.date)}2026.</p>
-  </div>
+    <p style="font-size:13px;margin:12px 0 0"><b>Abgabe auf myHWZ:</b> Curriculum bis ${fmtCH(dl.curriculum)} (2 Wochen vorher), Präsentation (PDF + PPTX in der HWZ-Vorlage) bis ${fmtCH(dl.praesentation)} (1 Woche vorher).</p>
+  </details></div>
   <div class="prev-next">
     ${n>1?`<button onclick="openDay(${n-1})">← Tag ${n-1}</button>`:"<span></span>"}
     ${n<16?`<button onclick="openDay(${n+1})">Tag ${n+1} →</button>`:"<span></span>"}
@@ -750,7 +846,7 @@ function openDay(n){
 }
 
 const ICON_COPY='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
-const CHECKED={};
+function cfState(n){try{const a=JSON.parse(localStorage.getItem("cas-cf-"+n));return Array.isArray(a)?a:[]}catch(e){return[]}}
 function curFields(d){
   const ul=a=>"<ul>"+a.map(x=>"<li>"+esc(x)+"</li>").join("")+"</ul>";
   return [
@@ -784,7 +880,12 @@ function writeClip(html,text,btn,label){
   if(navigator.clipboard&&window.ClipboardItem){navigator.clipboard.write([new ClipboardItem({"text/html":new Blob([html],{type:"text/html"}),"text/plain":new Blob([text],{type:"text/plain"})})]).then(done).catch(()=>navigator.clipboard.writeText(text).then(done))}
   else navigator.clipboard.writeText(text).then(done);
 }
-function cfToggle(cb){const key=location.hash+"|"+cb.dataset.i;CHECKED[key]=cb.checked;cb.closest(".cf").classList.toggle("ok",cb.checked)}
+function cfToggle(cb,n){
+  const i=+cb.dataset.i;let a=cfState(n);
+  if(cb.checked){if(!a.includes(i))a.push(i)}else a=a.filter(x=>x!==i);
+  try{localStorage.setItem("cas-cf-"+n,JSON.stringify(a))}catch(e){}
+  cb.closest(".cf").classList.toggle("ok",cb.checked);
+}
 function cfCopy(n,i,btn){const f=curFields(dayOf(n))[i];writeClip(fieldHTML(f),fieldTXT(f),btn)}
 function cfCopyAll(n,btn){const fs=curFields(dayOf(n));const sel=[...document.querySelectorAll("#cur-block .cf input:checked")].map(c=>fs[+c.dataset.i]);
   if(!sel.length){const o=btn.innerHTML;btn.innerHTML="Zuerst Felder als geprüft markieren";setTimeout(()=>btn.innerHTML=o,1800);return}
@@ -803,15 +904,104 @@ $("#persons").innerHTML=PERSONS.map(p=>`
     <div class="einsatz">${p.days.map(n=>{const d=dayOf(n);return `<div><span class="dt">${d.date}</span><span><a href="#tage" onclick="openDay(${n})">Tag ${n} · ${esc(d.title)}</a> <span class="tag b-${d.b}">${BLOCKS[d.b]}</span> <span class="tag ln">${d.ln}</span></span></div>`}).join("")}</div>
     <p style="font-size:14px;margin:0">${esc(p.arc)}</p>
     <details><summary>Profil</summary><p>${esc(p.bio)}</p></details>
+    <p style="margin:10px 0 0"><button class="tag" style="font-size:13px;padding:6px 12px;cursor:pointer;border:1px solid var(--line)" onclick="openPerson('${p.id}')">Meine Startseite</button></p>
   </div>
-  <div class="todo"><h5>Aufgaben und Absprachen</h5><ul><li>Curriculum (HWZ-Vorlage) auf <a href="https://myhwz.fh-hwz.ch/" target="_blank" rel="noopener">myHWZ</a> ablegen, 10 Arbeitstage vor dem Kurstag</li><li>Präsentation in der HWZ-Vorlage als PDF und PPTX auf myHWZ ablegen, 5 Arbeitstage vor dem Kurstag</li>${p.todo.map(t=>`<li>${esc(t)}</li>`).join("")}</ul></div>
+  <div class="todo"><h5>Aufgaben und Absprachen</h5><ul>${p.days.map(n=>{const d=dayOf(n);const dl=deadlines(d);return `<li>Tag ${n}: Curriculum auf <a href="https://myhwz.fh-hwz.ch/" target="_blank" rel="noopener">myHWZ</a> bis ${fmtCH(dl.curriculum)} (2 Wochen vorher), Präsentation (PDF + PPTX) bis ${fmtCH(dl.praesentation)} (1 Woche vorher)</li>`}).join("")}${p.todo.map(t=>`<li>${esc(t)}</li>`).join("")}</ul></div>
 </div>`).join("");
+
+/* Materialpool */
+$("#material-list").innerHTML=MATERIALS.map(m=>`<tr><td><b>${esc(m.name)}</b><br><span class="muted mono">${esc(m.owner)}</span></td><td>${esc(m.zweck)}</td><td>${m.tage.map(n=>`<a href="#tage" onclick="openDay(${n})">Tag ${n}</a>`).join(", ")}</td><td>${m.status==="myhwz"?`<span class="tag ok">liegt auf myHWZ${m.seit?" seit "+esc(m.seit):""}</span>`:`<span class="tag warn">in Arbeit</span>`}</td></tr>`).join("");
+
+/* Dozierenden-Startseite */
+function renderPerson(p){
+  const isB=p.id==="beyeler";
+  const btn='class="tag" style="text-decoration:none;font-size:13px;padding:6px 12px"';
+  const fristRows=p.days.map(n=>{const d=dayOf(n),dl=deadlines(d);return `<tr><td class="mono" style="white-space:nowrap">Tag ${n}</td><td>${esc(d.title)}</td><td class="mono" style="white-space:nowrap">${fmtCH(d.iso)}${d.iso2?" (vor Ort, Halbtag)<br>"+fmtCH(d.iso2)+" (online, Halbtag)":""}</td><td class="mono ${dlClass(dl.curriculum)}" style="white-space:nowrap">${fmtCH(dl.curriculum)}</td><td class="mono ${dlClass(dl.praesentation)}" style="white-space:nowrap">${fmtCH(dl.praesentation)}</td></tr>`}).join("");
+  const dayCards=p.days.map(n=>{const d=dayOf(n),dl=deadlines(d);return `
+  <div class="doz-day"><h4>Tag ${n} · ${esc(d.title)} <span class="tag b-${d.b}">${BLOCKS[d.b]}</span></h4>
+    <p style="margin:0 0 8px"><b>Fristen:</b> Curriculum bis <b><span class="${dlClass(dl.curriculum)}">${fmtCH(dl.curriculum)}</span></b> · Präsentation bis <b><span class="${dlClass(dl.praesentation)}">${fmtCH(dl.praesentation)}</span></b>, beides auf myHWZ.</p>
+    <p style="margin:0 0 8px"><b>Artefakt des Tages:</b> ${esc(d.faden)}</p>
+    <div class="grid g2">
+      <div><h3 style="margin:6px 0 4px">Das stellst du bereit</h3><p style="margin:0;font-size:14px">${esc(TOOLDAYS[n][1])}</p></div>
+      <div><h3 style="margin:6px 0 4px">Das bringen die Teilnehmenden mit</h3><p style="margin:0;font-size:14px">${esc(TOOLDAYS[n][0])}</p></div>
+    </div>
+    <details style="margin-top:8px"><summary style="cursor:pointer;color:var(--hwz);font-size:13px">Hinweise für den Tag</summary><ul style="margin:6px 0 0;padding-left:18px">${d.tasks.map(t=>`<li>${esc(t)}</li>`).join("")}</ul></details>
+    <div class="btns">
+      <a class="tag" style="text-decoration:none;font-size:13px;padding:6px 12px;background:var(--hwz);color:#fff" href="downloads/curriculum/${CURFILES[n]}" download>Curriculum Tag ${n} (.docx)</a>
+      <a ${btn} href="downloads/HWZ_Praesentationsvorlage_extern_DE.potx" download>Präsentationsvorlage (.potx)</a>
+      <a ${btn} href="#tage" onclick="openDay(${n})">Tagesseite öffnen</a>
+      <a ${btn} href="${SKILL_URL}" target="_blank" rel="noopener">Unterlagen mit Claude erstellen</a>
+    </div>
+    <p class="muted" style="font-size:13px;margin:8px 0 0">Präsentationsvorlage: Inhalt und Gestaltung sind frei. Der Skill «cas-ai-unterricht» erstellt komplette Unterrichtsunterlagen (Tagesdramaturgie, Übungen, fertige PPTX in der HWZ-Vorlage, FERC-Reflexion).</p>
+  </div>`}).join("");
+  return `
+  <div class="doz-head"><h2>${esc(p.name)}</h2>
+    <div class="meta">${esc(p.role)}</div>
+    <div class="meta" style="margin-top:6px">${p.days.map(n=>{const d=dayOf(n);return `Tag ${n}: ${fmtCH(d.iso)}${d.iso2?" (vor Ort, Halbtag) + "+fmtCH(d.iso2)+" (online, Halbtag)":""}`}).join(" · ")}${isB?` · Jury Hackathon ${fmtCH(dayOf(6).iso)} · Coaching ${fmtCH(COACH.iso)}`:""}</div>
+  </div>
+  <h3>Deine Fristen (myHWZ)</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Tag</th><th>Modul</th><th>Kurstag</th><th>Curriculum bis (2 Wochen vorher)</th><th>Präsentation bis (1 Woche vorher)</th></tr></thead><tbody>${fristRows}</tbody></table></div>
+  <p class="muted" style="font-size:13px;margin:8px 0 0">Rot: überfällig. Gelb: in den nächsten 10 Tagen fällig.</p>
+  <h3>Deine Kurstage</h3>
+  ${dayCards}
+  <div class="doz-foot">
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px">
+      <a ${btn} href="https://myhwz.fh-hwz.ch/" target="_blank" rel="noopener">myHWZ öffnen</a>
+      <a ${btn} href="#material" onclick="showView('material')">Materialpool</a>
+      <button class="tag" style="font-size:13px;padding:6px 12px;cursor:pointer;border:1px solid var(--line)" onclick="icsExport('${p.id}')">Termine und Fristen als .ics herunterladen</button>
+    </div>
+    Teilnehmendenliste, Challenges und KPIs liegen aus Datenschutzgründen auf myHWZ.
+  </div>`;
+}
+function openPerson(id){
+  const p=byId(id); if(!p) return;
+  document.querySelectorAll("section.view").forEach(s=>s.classList.toggle("active",s.id==="v-doz-home"));
+  document.querySelectorAll("nav.side a").forEach(a=>a.classList.remove("active"));
+  $("#page-title").textContent=p.name;
+  $("#v-doz-home").innerHTML=renderPerson(p);
+  try{if(location.hash!=="#"+id)history.pushState(null,"","#"+id)}catch(e){}
+  window.scrollTo({top:0});
+}
+function icsEsc(s){return String(s).replace(/\\/g,"\\\\").replace(/;/g,"\\;").replace(/,/g,"\\,").replace(/\n/g,"\\n")}
+function icsFold(line){
+  const len=s=>new TextEncoder().encode(s).length;
+  if(len(line)<=75) return line;
+  const parts=[];let cur="";let limit=75;
+  for(const ch of line){
+    if(len(cur+ch)>limit){parts.push(cur);cur=ch;limit=74}
+    else cur+=ch;
+  }
+  if(cur)parts.push(cur);
+  return parts.join("\r\n ");
+}
+function icsBuild(p){
+  const L=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//HWZ CAS AI Marketing 2026//Cockpit//DE","CALSCALE:GREGORIAN","METHOD:PUBLISH"];
+  const dtn=iso=>iso.replace(/-/g,"");
+  const stamp="20260827T000000Z";
+  const timed=(uid,iso,sum,desc,loc)=>L.push("BEGIN:VEVENT","UID:"+uid,"DTSTAMP:"+stamp,"DTSTART:"+dtn(iso)+"T081500","DTEND:"+dtn(iso)+"T164500","SUMMARY:"+icsEsc(sum),"LOCATION:"+icsEsc(loc||"HWZ Sihlhof Zürich"),"DESCRIPTION:"+icsEsc(desc),"END:VEVENT");
+  const allday=(uid,iso,sum,desc)=>L.push("BEGIN:VEVENT","UID:"+uid,"DTSTAMP:"+stamp,"DTSTART;VALUE=DATE:"+dtn(iso),"DTEND;VALUE=DATE:"+dtn(addDays(iso,1)),"SUMMARY:"+icsEsc(sum),"DESCRIPTION:"+icsEsc(desc),"END:VEVENT");
+  p.days.forEach(n=>{
+    const d=dayOf(n),dl=deadlines(d);
+    timed(`cas26-tag${n}@hwz-cas-ai-marketing`,d.iso,`CAS AI Marketing · Tag ${n}${d.iso2?" Teil 1 (vor Ort, Halbtag)":""}: ${d.title}`,`Dozent:in: ${d.who}. ${d.faden}${d.iso2?" Halbtag vor Ort, 4 Lektionen; genaue Halbtageszeiten folgen über myHWZ.":""}`);
+    if(d.iso2) timed(`cas26-tag${n}b@hwz-cas-ai-marketing`,d.iso2,`CAS AI Marketing · Tag ${n} Teil 2 (online, Halbtag): ${d.title}`,`Dozent:in: ${d.who}. Online-Halbtag, 4 Lektionen; genaue Halbtageszeiten folgen über myHWZ.`,"Online");
+    allday(`cas26-tag${n}-curriculum@hwz-cas-ai-marketing`,dl.curriculum,`Frist: Curriculum Tag ${n} auf myHWZ`,`Curriculum für Tag ${n} (${d.title}) auf myHWZ ablegen, 2 Wochen vor dem Kurstag.`);
+    allday(`cas26-tag${n}-praesentation@hwz-cas-ai-marketing`,dl.praesentation,`Frist: Präsentation Tag ${n} auf myHWZ`,`Präsentation (PDF + PPTX) für Tag ${n} (${d.title}) auf myHWZ ablegen, 1 Woche vor dem Kurstag.`);
+  });
+  if(p.id==="beyeler") allday("cas26-coaching@hwz-cas-ai-marketing",COACH.iso,"CAS AI Marketing · Coaching-Session","20 Minuten pro Person, gebucht am Tag 1. chris.langes-meeting.beyonder.ch");
+  L.push("END:VCALENDAR");
+  return L.map(icsFold).join("\r\n")+"\r\n";
+}
+function icsExport(pid){
+  const p=byId(pid); if(!p) return;
+  const blob=new Blob([icsBuild(p)],{type:"text/calendar;charset=utf-8"});
+  const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=`cas-ai-marketing-${p.id}.ics`;document.body.appendChild(a);a.click();a.remove();
+}
 
 /* Clusters */
 $("#clusters").innerHTML=CLUSTERS.map(c=>`
 <div class="cluster"><h4>${esc(c.t)}</h4>
   <div class="who">${c.who.map(w=>`<b>${w[0]}</b> (Tag ${w[1]})`).join(" · ")}</div>
-  <table><thead><tr><th>Tag</th><th>Beitrag</th><th>Rolle</th></tr></thead><tbody>${c.rows.map(r=>`<tr><td class="mono" style="white-space:nowrap">${r[0]}</td><td>${esc(r[1])}</td><td><span class="tag">${r[2]}</span></td></tr>`).join("")}</tbody></table>
+  <div class="tbl-wrap"><table><thead><tr><th>Tag</th><th>Beitrag</th><th>Rolle</th></tr></thead><tbody>${c.rows.map(r=>`<tr><td class="mono" style="white-space:nowrap">${r[0]}</td><td>${esc(r[1])}</td><td><span class="tag">${r[2]}</span></td></tr>`).join("")}</tbody></table></div>
   <div class="note" style="margin-bottom:0"><b>Absprache:</b> ${esc(c.deal)}</div>
 </div>`).join("");
 
@@ -852,16 +1042,25 @@ $("#frameworks").innerHTML=[...FRAMEWORKS].sort((a,b)=>(a.id==="stufen"?-1:b.id=
 <p style="font-size:14px">${esc(f.what)}</p><p style="font-size:14px;margin:0">${esc(f.use)}</p></details></div>`}).join("");
 
 /* Routing */
+const SL_VIEWS=["schnittthemen","transfer","leistungsnachweise","rahmen"];
 function showView(v){
   document.querySelectorAll("section.view").forEach(s=>s.classList.toggle("active",s.id==="v-"+v));
   document.querySelectorAll("nav.side a").forEach(a=>a.classList.toggle("active",a.dataset.view===v));
   const s=$("#v-"+v); $("#page-title").textContent=s?s.dataset.title:"";
-  try{if(location.hash!=="#"+v) history.replaceState(null,"","#"+v)}catch(e){}
+  const sl=document.getElementById("nav-sl"); if(sl&&SL_VIEWS.includes(v)) sl.open=true;
+  try{if(location.hash!=="#"+v) history[showView._replace?"replaceState":"pushState"](null,"","#"+v)}catch(e){}
   if(v==="tage"&&!$("#day-detail").innerHTML&&!showView._in){showView._in=1;openDay(1);showView._in=0}
 }
 document.querySelectorAll("nav.side a").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();showView(a.dataset.view);window.scrollTo({top:0})}));
-window.addEventListener("hashchange",()=>{const v=location.hash.slice(1);if(document.getElementById("v-"+v))showView(v)});
-showView(document.getElementById("v-"+location.hash.slice(1))?location.hash.slice(1):"uebersicht");
+function route(){
+  const h=location.hash.slice(1);
+  if(PERSONS.some(p=>p.id===h)){openPerson(h);return}
+  if(h==="doz-home"){showView("uebersicht");return}
+  showView(document.getElementById("v-"+h)?h:"uebersicht");
+}
+window.addEventListener("hashchange",route);
+window.addEventListener("popstate",()=>route());
+showView._replace=1; route(); showView._replace=0;
 </script>
 </body>
 </html>

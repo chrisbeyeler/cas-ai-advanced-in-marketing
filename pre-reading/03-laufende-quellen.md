@@ -7,6 +7,7 @@ KI-Wissen veraltet schnell. Diese Quellen halten dich während des CAS und darü
 - **swissAI Weekly:** Wöchentlicher KI-Überblick mit Schweiz-Fokus, erscheint freitags. Abonnieren auf swissai.ch. Die Weekly-Themen greifen wir im Unterricht regelmässig auf.
 - **swissAI Wiki (Member-Bereich):** Nachschlagewerk mit Kursunterlagen, Prompt-Bausteinen und Vertiefungsartikeln unter member.kimpact.ch. Zugang erhältst du mit der swissAI-Mitgliedschaft.
 - **swissAI KI-Strategie-Paket:** Use-Case-Canvas, Bewertungsraster, Governance-Check und elf Prompts. Gratis gegen E-Mail auf swissai.ch/ki-strategie. Wird an Tag 4 (Business Case) und Tag 12 (Roadmap) als Arbeitsmaterial gebraucht, lade es vorher herunter.
+- **68 KI-Use-Cases (BEYONDER):** Sammlung von 68 KI-Anwendungsfällen aus acht Funktionsbereichen, jeder mit Aufgabe, Tool, Anleitung und Bewertung: https://beyondernow.github.io/ki-use-cases-landingpage/. Zugänge über Quick Win, KI-Kompass oder KI-Match, dazu eine filterbare Übersicht und ein Excel-Download. Vor Tag 1 durchsehen als Ideenspeicher für den Challenge-Pitch.
 
 ## Referenzen, die im CAS immer wieder auftauchen
 

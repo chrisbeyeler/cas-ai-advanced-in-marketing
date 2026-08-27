@@ -10,7 +10,7 @@ Willkommen im CAS Advanced AI in Marketing (HWZ, Start 02.09.2026, 16 Studientag
 | 2 | [Rahmenmodelle](06-rahmenmodelle.md) – die Modelle und Begriffe, auf die der CAS immer wieder verweist | 15 Min. |
 | 3 | [Prompt-Grundlagen](01-prompt-grundlagen.md) – Pflichtlektüre, wird am ersten Tag vorausgesetzt | 60 Min. inkl. Übungen |
 | 4 | [Vorbereitungs-Checkliste](02-vorbereitungs-checkliste.md) – Accounts, Material, Setup | 45 Min. |
-| 5 | [Laufende Quellen](03-laufende-quellen.md) – abonnieren und dranbleiben | 10 Min. |
+| 5 | [Laufende Quellen](03-laufende-quellen.md) – abonnieren und dranbleiben, darunter die 68 KI-Use-Cases als Ideenspeicher | 10 Min. |
 | 6 | [Challenge-Pitch](05-challenge-pitch.md) – vorbereiten, **Abgabe am Ende von Tag 1 (02.09.) auf myHWZ**, Zulassungsbedingung | 60 Min. |
 
 ## Was wir voraussetzen
