@@ -6,6 +6,6 @@ Inhalt: Semesterband mit allen 18 Terminen, Tagesseiten (Thema, Lernziele, Trans
 
 Datenquellen: Stundenplan V1.2 (27.08.2026), Modulaufbau-Matrix, Dozierendenprofile. Alle Daten liegen im ersten `<script>`-Block von `index.html` und lassen sich dort direkt pflegen.
 
-Ordner `pre-reading/`: Vorbereitungspaket für Teilnehmende, neu mit `05-challenge-pitch.md` (Zulassungsbedingung, Abgabe 31.08.).
+Ordner `pre-reading/`: Vorbereitungspaket für Teilnehmende, neu mit `05-challenge-pitch.md` (Zulassungsbedingung, Abgabe am Ende von Tag 1, 02.09.).
 
 Ordner `downloads/`: HWZ Curriculum-Vorlage (leer), HWZ Präsentationsvorlage (.potx) und unter `downloads/curriculum/` 16 vorbefüllte Curricula, je eines pro Kurstag. Die Seite verlinkt sie relativ; die Ordnerstruktur muss im Repo erhalten bleiben.

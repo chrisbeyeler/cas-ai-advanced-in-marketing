@@ -1,6 +1,6 @@
 # Pre-Reading-Paket
 
-Willkommen im CAS Advanced AI in Marketing. Dieses Paket bereitet dich auf den Kursstart vor. Plane dafür 3 bis 4 Stunden ein, verteilt auf die Tage vor dem ersten Kurstag.
+Willkommen im CAS Advanced AI in Marketing (HWZ, Start 02.09.2026, 16 Studientage bis 11.12.2026, Sihlhof Zürich). Dieses Paket bereitet dich auf den Kursstart vor. Plane dafür 3 bis 4 Stunden ein, verteilt auf die Tage vor dem ersten Kurstag. Alle Unterlagen und Abgaben laufen über myHWZ (myhwz.fh-hwz.ch).
 
 ## So gehst du vor
 
@@ -16,7 +16,7 @@ Willkommen im CAS Advanced AI in Marketing. Dieses Paket bereitet dich auf den K
 
 Am ersten Kurstag arbeiten wir sofort praktisch. Du solltest vorher:
 
-- die Prompt-Grundlagen gelesen und die kurzen Übungen gemacht haben
+- die Prompt-Grundlagen gelesen und die Übungen gemacht haben; das CORE+-Schema daraus ist ab Tag 1 das gemeinsame Vokabular
 - deine Accounts eingerichtet haben (siehe Checkliste); Abos zahlen Teilnehmende selbst, Trial-Versionen reichen meist
 - deine eigenen Texte und Unternehmensinformationen dabei haben (siehe Checkliste)
 - deinen Challenge-Pitch mit Zielsetzung und ROI-Schätzung vorbereitet haben (Abgabe am Ende von Tag 1)
